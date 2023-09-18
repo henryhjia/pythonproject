@@ -23,6 +23,8 @@ class JsonReader:
     self._data_dict = {}
     self._data_type = None
 
+    self._data = None
+
     print(self._filename)
     pass
 
@@ -50,6 +52,14 @@ class JsonReader:
     print('*********** read_json_list_of_list()')
     self._input_list_of_list = json.load(open('input_list_of_list.json', 'r'))
 
+  def read_json_data(self):
+    if os.path.isfile(self._filename):      
+      self._data = json.load(open(self._filename, 'r'))
+
+    else:
+      print(self._filename, ' does not exit')
+      exit(1)
+
   def read_json(self):
 
     print('\n*********** read_json(), json_file=', self._filename)
@@ -67,6 +77,9 @@ class JsonReader:
       print(self._filename, ' does not exit')
       exit(1)
 
+  def print_json_data(self):
+    print(self._data)
+    
   def print_data(self):
     if self._data_type == list:
       for item in self._data_list:

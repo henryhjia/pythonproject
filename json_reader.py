@@ -15,8 +15,10 @@ def main(args: list=None) -> int:
     exit(1)
 
   me = json_reader_module.JsonReader(args[1])
-  me.read_json()
-  me.print_data()
+  # me.read_json()
+  # me.print_data()
+  me.read_json_data()
+  me.print_json_data()
 
 
 if __name__ == '__main__':
