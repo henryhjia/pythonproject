@@ -70,12 +70,19 @@ class JsonReader:
   def print_data(self):
     if self._data_type == list:
       for item in self._data_list:
+        print(item)
+    elif self._data_type == dict:    
+      for key, value in self._data_dict.items():
+        print(key, value)
+
+  def print_formated_data(self):
+    if self._data_type == list:
+      for item in self._data_list:
         for key, value in item.items():
           print(f'{key:10s} {value[0]:10s} {value[1]:5d} {value[2]:4d}')
     elif self._data_type == dict:
       for key, value in self._data_dict.items():
         print(f'{key:10s} {value[0]:8s} {value[1]:6d} {value[2]:10.2f} {value[3]:10.2f}')
-
 
 if __name__ == '__main__':
     print('module only, not main')
