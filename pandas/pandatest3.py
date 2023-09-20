@@ -102,9 +102,13 @@ class PandaTester:
                  {'Name': 'Helen',
                   'Class': 'Biology',
                   'Score': 90}]
+    print('dateframe from list of dictionaries-----')
+    df = pd.DataFrame(students)
+    print(df)
+    print('\n')
 
     df = pd.DataFrame(students, index=['school1', 'school2', 'school1'])
-    print('dateframe from list of dictionaries-----')
+    print('dateframe from list of dictionaries with index-----')
     print(df)
     print('\n')
 
@@ -121,7 +125,11 @@ class PandaTester:
     print(d)
     print(type(d))
     print('\n')
-    # print(df.loc['school1', ['Name', 'Score']])
+
+    print('school1 with names, score-----')
+    print('df.loc[\'school1\', [\'Name\', \'Score\']]')
+    print(df.loc['school1', ['Name', 'Score']])
+    print('\n')
 
     print('df.loc[\'school1\'][\'Name\'] -- chaining---')
     d = df.loc['school1']['Name']
