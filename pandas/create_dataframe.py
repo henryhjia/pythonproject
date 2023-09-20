@@ -46,7 +46,10 @@ class PandaTester:
     print('dateframe from list of dictionaries with index-----')
     print(df)
     print('\n')
-
+    print('column names')
+    print(df.columns)
+    print('\n')
+    
     print('school1-----')
     d = df.loc['school1']
     print('d.loc[\'school1\']')
