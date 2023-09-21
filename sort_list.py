@@ -8,46 +8,20 @@ l2 = sorted(l1) - create a new list that is sorted
 l1.sort() - in place sort
 
 """
-
-class SortListTester:
-  """
-  """
-  def sort_data(self) -> None:
-    """
-    1. sorted()
-    """
-
-    l1 = [10, 9,4,6,20,1]
-
-    l2 = sorted(l1)
-    print('original list=', l1)
-    print('sorted list  =', l2)
-
-    l1 = ['henry', 'claire', 'jean', 'maggie']
-    l2 = sorted(l1)
-    print('original list=', l1)
-    print('sorted list  =', l2)
-
-    """
-    2. sort()
-    """
-    l1 = [10, 9,4,6,20,1]
-    print('original list=', l1)
-    l1.sort()
-    print('sorted list  =', l1)
-
-    l1 = ['henry', 'claire', 'jean', 'maggie']
-    print('original list=', l1)
-    l1.sort()
-    print('sorted list  =', l1)
+import list_sort_module
 
 def main() -> int:
 
-  me = SortListTester()
+  me = list_sort_module.SortListTester()
 
-  # sort data from variables
-  me.sort_data()
+  # Use sorted() method
+  me.sort_sorted()
 
+  # Use .sort() inplace sort
+  me.sort_in_place_sort()
+
+  # Sort integers in a mixed data list, and keep unique
+  me.sort_integer_unique_mixed_data_type_in_list()
 
 if __name__ == '__main__':
   main()
