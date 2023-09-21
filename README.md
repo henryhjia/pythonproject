@@ -4,7 +4,6 @@ Python project
    setting->developer setting->...
 2. In GitHub, create a repository, e.g. pythonproject
 3. In Ubuntu top directory e.g. ~/Projects/ clone the Git Repository:
-   git clone https://oauth2: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@github.com/henryhjia/pythonproject.git
 
 Cloning into 'pythonproject'...
 remote: Enumerating objects: 4, done.
