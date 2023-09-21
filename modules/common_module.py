@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# @brief common print function 
 
 Gl_div = '+'*10
 

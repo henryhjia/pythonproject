@@ -1,6 +1,6 @@
 # !/use/bin/python3
 """
-Sort string
+@brief Sort string
 @sortstring
 
 To sort the characters of the string 'google' in alphabetical order, you can use the sorted() 

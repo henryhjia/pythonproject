@@ -1,6 +1,6 @@
 #!/use/bin/python3
 """
-Reverse string
+@brief Reverse string
 @reversestring
 
 Two methods:
@@ -14,38 +14,20 @@ order of characters in-place.
 
 If you want to reverse a string, you can achieve it using slicing
 """
+import string_reverse_module
+import sys
 
-class ReverseStringTester:
-  """
-  """
-  def reverse_data(self) -> None:
-    """
-    1. Reverse string
-    """
+def main(args: list=None) -> int:
+  print(f'lengh of argument : {len(args)}')
+  if len(args) < 2:
+    print('usage:', args[0], 'google')
+    exit(1)
 
-    my_string = 'google'
+  me = string_reverse_module.ReverseStringTester()
 
-    reversed_string = my_string[::-1]
-    print('original string=', my_string)
-    print('reversed string=', reversed_string)
-
-  def reverse_data2(self) -> None:
-    my_string = 'google'
-    reverse_string=''
-
-    str_len=len(my_string)
-    for i in range(str_len):
-      reverse_string += my_string[str_len-1-i]
-    
-    print('reversed string=', reverse_string)
-
-def main() -> int:
-
-  me = ReverseStringTester()
-
-  # reverse data from variables
-  me.reverse_data()
-  me.reverse_data2()
+  # reverse strings
+  me.reverse_data_using_slicing(args[1])
+  me.reverse_data_manually(args[1])
 
 if __name__ == '__main__':
-  main()
+  main(sys.argv)

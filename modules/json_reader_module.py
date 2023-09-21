@@ -1,6 +1,6 @@
 #!/use/bin/python3
 """
-json reader 
+@brief json reader 
 @jsonreader
 """
 import json

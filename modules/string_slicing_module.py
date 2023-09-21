@@ -1,8 +1,7 @@
 #!/use/bin/python3
 """
-Python practice
-reverse string
-July 2023
+@brief string slicing module
+@stringslicing
 """
 
 class StringSlicingTester:
@@ -46,33 +45,5 @@ class StringSlicingTester:
 
     return sum
   
-  def reverse_string_using_slicing(self, in_str: str) -> str:
-    """
-    NOTE: string does not have build-in reverse method
-    """
-    print('\n*********** reverse_string_using_slicing()')
-    reverse_str = in_str[::-1]
-    return reverse_str
-  
-def main() -> int:
-  """
-  """
-  me = StringSlicingTester()
-
-  # find a string
-  in_str = 'ABCCDCDCDCDC'
-  pattern = 'CDC'
-
-  result = me.find_string_by_coding(in_str, pattern)
-  print(f'The total number of matching string is {result}')
-
-  result = me.find_string_using_slicing(in_str, pattern)
-  print(f'The total number of matching string \'{pattern}\' is {result}')
-
-  result = me.reverse_string_using_slicing(in_str)
-  print('Original str=', in_str)
-  print('Reversed str=', result)
-  exit(0)
-
 if __name__ == '__main__':
-  main()
+    print('module only, not main')

@@ -1,6 +1,6 @@
 #!/use/bin/python3
 """
-graph plotter
+@brief graph plotter
 @graphplooter
 """
 import matplotlib.pyplot as plt
