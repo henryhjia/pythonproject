@@ -14,7 +14,7 @@ class MapTester:
 
     numbers = [1,2,3,4,5]
     squared_numbers = map(lambda x: x**2, numbers)
-
+    print(squared_numbers)
     print('squared_number list=', list(squared_numbers))
 
   def cheaptest(self):

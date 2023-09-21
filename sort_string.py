@@ -6,31 +6,31 @@ Sort string
 To sort the characters of the string 'google' in alphabetical order, you can use the sorted() 
 function to create a sorted list of characters and then join() them back into a string.
 """
+import sys
+import string_sort_module
 
-class SortStringTester:
-  """
-  """
-  def sort_data(self) -> None:
-    """
-    1. Sort string
-    """
+def main(args: list=None) -> int:
+  print(f'lengh of argument : {len(args)}')
+  if len(args) < 2:
+    print('usage:', args[0], 'google')
+    exit(1)
 
-    my_string = 'google'
+  me = string_sort_module.SortStringTester()
 
-    sorted_list = sorted(my_string)
-    print(sorted_list)
+  # sort string
+  result = me.sort_data(args[1])
+  print(result)
 
-    sorted_string = ''.join(sorted_list)
+  # sort both alphabet and digit string with these criterias:
+  # 1. lower case letter before upper case letter
+  # 2. alphebet before digit
+  # 3. odd digit before even digit
+  # an example: Sorted1234
+  # result: deortS1324
+  # 
 
-    print('sorted_string=', sorted_string)
-
-def main() -> int:
-
-  me = SortStringTester()
-
-  # sort data from variables
-  me.sort_data()
-
+  result = me.sort_alpha_digit(args[1])
+  print(result)
 
 if __name__ == '__main__':
-  main()
+  main(sys.argv)
