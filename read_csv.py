@@ -1,13 +1,13 @@
 #!/use/bin/python3
 """
-csv reader 
-@csvreader
+read csv file 
+@readcsv
 """
 import csv_reader_module
 
 def main() -> int:
 
-  me = csv_reader_module.CsvReader('mpg.csv')
+  me = csv_reader_module.CsvReader('../data/mpg.csv')
   me.read_csv()
 
 if __name__ == '__main__':
