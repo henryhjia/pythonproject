@@ -415,8 +415,8 @@ def default_dict_with_file():
 
   found = False
   d = defaultdict(list)  
-  myfile = open('testcase1.txt', 'r')
-  out_file = open('testcase1_out.txt', 'w')
+  myfile = open('../data/testcase1.txt', 'r')
+  out_file = open('../data/testcase1_out.txt', 'w')
   text = myfile.readline()
 
   i = 0
