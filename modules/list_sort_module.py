@@ -13,6 +13,16 @@ import common_module
 class SortListTester:
   """
   """
+  def __init__(self):
+    """
+    """
+    self._my_list_of_dict = [
+        {'name':'Sam', 'number': 11}, 
+        {'name':'Jan', 'number': 1},
+        {'name':'Kate', 'number':9},
+        {'name':'Bob', 'number':13}
+    ]
+
   def sort_sorted(self) -> None:
     """
     1. sorted()
@@ -68,6 +78,57 @@ class SortListTester:
 
     print('Sorted unique list=')
     print(outlist)
+
+  def sort_list_of_dictionary_by_value(self) -> None:
+    """
+    1. Sort a dictionary
+       a. sort dic.items() so it becomes a list of tuples
+       b. convert the list of tuple to a dictionary
+    2. Sort list of dictionaries
+       a. sort the list of dictionaires by using sort(list_of_dict, key=lambda, x:x[''] notation)
+    3. Sort list of complex dictionary
+    """
+    common_module.print_function(self.sort_list_of_dictionary_by_value)
+  
+    my_list_of_dict = [
+        {'name':'Sam', 'number': 11}, 
+        {'name':'Jan', 'number': 1},
+        {'name':'Kate', 'number':9},
+        {'name':'Bob', 'number':13}
+    ]
+    print('my_list_of_dict=', self._my_list_of_dict)
+    sorted_list_of_dictionary = sorted(self._my_list_of_dict, key=lambda x:x['number'])
+    print('sorted list of dictionary=', sorted_list_of_dictionary)
+
+  def sort_list_of_dictionary_by_key(self) -> None:
+    common_module.print_function(self.sort_list_of_dictionary_by_key)
+  
+    print('my_list_of_dict=', self._my_list_of_dict)
+    sorted_list_of_dictionary = sorted(self._my_list_of_dict, key=lambda x:x['name'])
+    print('sorted list of dictionary=', sorted_list_of_dictionary)
+
+  def sort_list_of_complex_dictionary(self) -> None:
+    common_module.print_function(self.sort_list_of_complex_dictionary)
+
+    my_list_of_dict = [
+        { "dad": ["Ted",32,72]},
+        { "mom": ["Karren",2,68]},
+        { "daughter": ["Sue",9,42]},
+        { "daughter": ["Linda",11,38]}
+    ]
+    print('my_list_of_dict=', my_list_of_dict)
+
+    sorted_list = sorted(my_list_of_dict, key=lambda x:x[list(x.keys())[0]][1])     
+    print('sort by value 1:', sorted_list)
+
+    sorted_list = sorted(my_list_of_dict, key=lambda x:x[list(x.keys())[0]][2])     
+    print('sort by value 2:', sorted_list)
+
+    sorted_list = sorted(my_list_of_dict, key=lambda x:x[list(x.keys())[0]][0])     
+    print('sort by value 0:', sorted_list)
+
+    sorted_list = sorted(my_list_of_dict, key=lambda d: list(d.keys())[0])     
+    print('sort by key:    ', sorted_list)
 
 if __name__ == '__main__':
     print('module only, not main')
