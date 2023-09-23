@@ -60,6 +60,30 @@ class ProcessList:
     out_list = in_list[::-1]
 
     return out_list
-  
+
+  def list_moving_total_contains(self, in_list, total):
+    """
+    @in_list: list of integers
+    @param total: (int) The total to check for.
+    @return: (bool) If moving total contains the total, count it.  Return the final count
+    """
+    list_len = len(in_list)
+    print(in_list, 'total=', total)
+    mysumlist = []
+    mysum = 0
+    for i in range(list_len):
+      if i+3 <= list_len:
+          sub_list = in_list[i:i+3]
+          mysum = sum(sub_list)
+          mysumlist.append(mysum)
+          mysum = 0
+    
+    ret_value = False
+    for item in mysumlist:
+        if item == total:
+            ret_value = True
+
+    return ret_value
+      
 if __name__ == '__main__':
     print('module only, not main')
