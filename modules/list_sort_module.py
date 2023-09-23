@@ -1,4 +1,3 @@
-#!/use/bin/python3
 """
 Sort list
 @sortlist
@@ -8,6 +7,8 @@ l2 = sorted(l1) - create a new list that is sorted
 l1.sort() - in place sort
 
 """
+import json
+import ast
 import common_module
 
 class SortListTester:
@@ -160,6 +161,102 @@ class SortListTester:
     print('sort based on x[2]')
     for i in sorted_list:
       print(i)
+
+  def sort_by_price_ascending_by_price_ast_literal_eval(self, json_string):
+      # convert to a list of dictionaries from a string json_string
+      # method 1:
+      list_of_dictionaries = ast.literal_eval(json_string)
+
+      # sort the list of dictionaires by the value 'price' in the dictionary
+      sorted_list = sorted(list_of_dictionaries, key=lambda x:x['price'])
+
+      return sorted_list
+
+  def sort_by_price_ascending_by_price_json_loads(self, json_string):
+      # convert to a list of dictionaries from a string json_string
+      # method 2:
+      list_of_dictionaries = json.loads(json_string)
+
+      # sort the list of dictionaires by the value 'price' in the dictionary
+      sorted_list = sorted(list_of_dictionaries, key=lambda x:x['price'])
+
+      return sorted_list
+
+  def sort_by_price_ascending_by_name_ast_literal_eval(self, json_string):
+      # convert to a list of dictionaries from a string json_string
+      # method 1:
+      list_of_dictionaries = ast.literal_eval(json_string)
+
+      # sort the list of dictionaires by the value 'price' in the dictionary
+      sorted_list = sorted(list_of_dictionaries, key=lambda x:x['name'])
+
+      return sorted_list
+
+  def sort_by_price_ascending_by_name_json_loads(self, json_string):
+      # convert to a list of dictionaries from a string json_string
+      # method 2:
+      list_of_dictionaries = json.loads(json_string)
+
+      # sort the list of dictionaires by the value 'price' in the dictionary
+      sorted_list = sorted(list_of_dictionaries, key=lambda x:x['name'])
+
+      return sorted_list
+
+  def sort_by_price_descending_by_name(self, json_string):
+      # convert to a list of dictionaries from a string json_string
+      # method 2:
+      list_of_dictionaries = json.loads(json_string)
+
+      # sort the list of dictionaires by the value 'price' in the dictionary
+      sorted_list = sorted(list_of_dictionaries, key=lambda x:x['name'], reverse=True)
+
+      return sorted_list
+
+  def sort_by_price_descending_by_price(self, json_string):
+      # convert to a list of dictionaries from a string json_string
+      # method 2:
+      list_of_dictionaries = json.loads(json_string)
+
+      # sort the list of dictionaires by the value 'price' in the dictionary
+      sorted_list = sorted(list_of_dictionaries, key=lambda x:x['price'], reverse=True)
+
+      return sorted_list
+
+  def sort_by_price_ascending_by_key(self, json_string):
+      # convert to a dictionaries from a string json_string, then sort dictionary by key
+
+      mydic = json.loads(json_string)
+      mysorted_list = sorted(mydic.items())
+      sorted_dict = dict(mysorted_list)
+
+      return sorted_dict
+
+  def sort_by_price_ascending_by_value(self, json_string):
+      # convert to a dictionaries from a string json_string, then sort dictionary by value
+
+      mydic = json.loads(json_string)
+      mysorted_list = sorted(mydic.items(), key=lambda x:x[1])
+      sorted_dict = dict(mysorted_list)
+
+      return sorted_dict
+
+  def sort_by_price_descending_by_key(self, json_string):
+      # convert to a dictionaries from a string json_string, then sort dictionary by value
+
+      mydic = json.loads(json_string)
+      mysorted_list = sorted(mydic.items(), reverse=True)
+      sorted_dict = dict(mysorted_list)
+
+      return sorted_dict
+
+  def sort_by_price_descending_by_value(self, json_string):
+      # convert to a dictionaries from a string json_string, then sort dictionary by value
+
+      mydic = json.loads(json_string)
+      mysorted_list = sorted(mydic.items(), key=lambda x:x[1], reverse=True)
+      sorted_dict = dict(mysorted_list)
+
+      return sorted_dict
 
 if __name__ == '__main__':
     print('module only, not main')

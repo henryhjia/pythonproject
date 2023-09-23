@@ -67,6 +67,8 @@ class ProcessList:
     @param total: (int) The total to check for.
     @return: (bool) If moving total contains the total, count it.  Return the final count
     """
+    common_module.print_function(self.list_moving_total_contains)
+    
     list_len = len(in_list)
     print(in_list, 'total=', total)
     mysumlist = []
