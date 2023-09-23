@@ -357,7 +357,7 @@ def frequent_element():
 
 def main() -> int:
 
-  # validate_palindrome()
+  validate_palindrome()
 
   print(validate_palindrome2())
 
