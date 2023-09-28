@@ -1,4 +1,3 @@
-#!/use/bin/python3
 """
 leetcode program
 August 2023
@@ -15,18 +14,12 @@ from Complex import Complex
 from Points import Points
 from functools import reduce
 from fractions import Fraction
-
-Gl_div = '+'*10
-
-def print_function(function_name, parameter=''):
-  """
-  """
-  print(f'{Gl_div} {function_name} for {parameter}')
+import common_module
 
 def validate_palindrome():
   """
   """
-  print_function(validate_palindrome)
+  common_module.print_function(validate_palindrome)
 
   s = "5 man, a plan, a canal: Panam5"
 
@@ -68,7 +61,7 @@ def validate_palindrome2() -> bool:
 def best_time_buy_sell_stock():
   """
   """
-  print_function(best_time_buy_sell_stock)
+  common_module.print_function(best_time_buy_sell_stock)
 
   prices = [2,4,1]
   # prices = [3,2,6,5,0,3]
@@ -156,7 +149,7 @@ def validate_parenthese(s) -> bool:
 def validate_parenthese_driver() -> bool:
   """
   """
-  print_function(validate_parenthese_driver)
+  common_module.print_function(validate_parenthese_driver)
 
   inlist = [
     '(]',
@@ -176,7 +169,7 @@ def validate_parenthese_driver() -> bool:
 def binary_search():
   """
   """
-  print_function(binary_search)
+  common_module.print_function(binary_search)
   target = 5
   
   nums=[1,2,3,4,5,6,7,8,9,10,11,12,13]
@@ -207,7 +200,7 @@ class Node:
 def singly_linked_list():
   """
   """
-  print_function(singly_linked_list)
+  common_module.print_function(singly_linked_list)
 
   node1 = Node(10)
   node2 = Node(20)
@@ -224,7 +217,7 @@ def singly_linked_list():
 def reverse_linked_list():
   """
   """
-  print_function(reverse_linked_list)
+  common_module.print_function(reverse_linked_list)
 
   node1 = Node(10)
   node = node1
@@ -255,7 +248,7 @@ def reverse_linked_list():
 def reverse_linked_list2():
   """
   """
-  print_function(reverse_linked_list)
+  common_module.print_function(reverse_linked_list)
 
   node1 = Node(10)
   node = node1
@@ -279,7 +272,7 @@ def reverse_linked_list2():
 def combine_two_sorted_linked_list():
   """
   """
-  print_function(combine_two_sorted_linked_list)
+  common_module.print_function(combine_two_sorted_linked_list)
 
   node1 = Node(1)
   node2 = Node(2)
@@ -329,7 +322,7 @@ def combine_two_sorted_linked_list():
 def frequent_element():
   """
   """
-  print_function(frequent_element)
+  common_module.print_function(frequent_element)
 
   nums = [1,1,1,2,2,3]
   # nums = [-1,-1]
