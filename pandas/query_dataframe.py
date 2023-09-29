@@ -44,6 +44,10 @@ class PandaTester:
     print(df['chance of admit'].gt(0.7) & df['chance of admit'].lt(0.9))
     print(df['chance of admit'].gt(0.7).lt(.09))
 
+    print('++++++++++ gre score > 320 & toefl score > 110, note: backticks is used for the column name')     
+    result = df.query('(`gre score` > 320) & (`toefl score` > 110)')
+    print(result)
+
 def main(args: list=None) -> int:
   print(f'lengh of argument : {len(args)}')
   if len(args) < 2:
