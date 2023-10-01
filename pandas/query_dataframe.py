@@ -28,6 +28,10 @@ class PandaTester:
     admit_mask = df['chance of admit'] > 0.7
     print(admit_mask)
 
+    print('++++++++++ isnull() mask')
+    null_mask = df.isnull()
+    print(null_mask.head(10))
+
     print('++++++++++ where value > 0.7')    
     print(df.where(admit_mask).head())
 
