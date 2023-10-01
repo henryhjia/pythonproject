@@ -26,7 +26,11 @@ class PandaTester:
     df = df.sort_index()         
     print(df.head(20))
 
-
+    print('++++++++++ use time and user as indexes')    
+    df = df.reset_index()
+    df = df.set_index(['time', 'user'])
+    print(df.head(20))
+    
 def main(args: list=None) -> int:
   print(f'lengh of argument : {len(args)}')
   if len(args) < 2:
