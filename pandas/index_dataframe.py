@@ -62,6 +62,7 @@ class PandaTester:
     print('++++++++++ result from Michigan state and Washtenaw county as due index') 
     print(df.loc['Michigan','Washtenaw County'])
 
+    print('++++++++++ result from Michigan state') 
     print(df.loc['Michigan'])
 
 def main(args: list=None) -> int:
