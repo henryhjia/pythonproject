@@ -1,6 +1,7 @@
 """
 @sort
 @sortindex
+use log.csv
 """
 import pandas as pd
 import sys

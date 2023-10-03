@@ -1,5 +1,6 @@
 """
 @replace
+use presidents.csv
 """
 import pandas as pd
 import sys

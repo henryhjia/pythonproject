@@ -3,6 +3,7 @@
 @mask
 @index
 @multilevelindex
+use census.csv
 """
 import pandas as pd
 import sys

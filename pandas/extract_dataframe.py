@@ -1,5 +1,6 @@
 """
 @extract
+use presidents.csv
 """
 import pandas as pd
 import sys

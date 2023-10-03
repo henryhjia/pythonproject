@@ -1,6 +1,7 @@
 """
 @booleanmask
 @mask
+use Admission_Predict.csv
 """
 import pandas as pd
 import sys
