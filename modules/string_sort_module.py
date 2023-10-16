@@ -17,11 +17,8 @@ class SortStringTester:
     """
     1. Sort string
     """
-
     sorted_list = sorted(input_string)
-    # print(sorted_list)
     sorted_string = ''.join(sorted_list)
-    # print('sorted_string=', sorted_string)
 
     return sorted_string
 
