@@ -12,11 +12,16 @@ import unittest
 import string_reverse_module
 
 class UnitTest(unittest.TestCase):
+  def setUp(self):
+    print('setup')
+    self.me = string_reverse_module.ReverseStringTester()
+
+  def tearDown(self):
+    print('teardown')
 
   def test_1_reverse_data_using_slicing(self):
-    me = string_reverse_module.ReverseStringTester()
     orig_string = "google"
-    reversed_string = me.reverse_data_using_slicing(orig_string)
+    reversed_string = self.me.reverse_data_using_slicing(orig_string)
 
     self.assertEqual(reversed_string[0], orig_string[5])
     self.assertEqual(reversed_string[1], orig_string[4])
@@ -26,10 +31,8 @@ class UnitTest(unittest.TestCase):
     self.assertEqual(reversed_string[5], orig_string[0])    
 
   def test_2_reverse_data_manually(self):
-    me = string_reverse_module.ReverseStringTester()
-
     orig_string = "amazon"    
-    reversed_string = me.reverse_data_manually(orig_string)
+    reversed_string = self.me.reverse_data_manually(orig_string)
 
     self.assertEqual(reversed_string[0], orig_string[5])
     self.assertEqual(reversed_string[1], orig_string[4])

@@ -4,6 +4,11 @@ def add(a, b):
     return a + b
 
 class TestAddition(unittest.TestCase):
+    def setUp(self):
+      print('setup')
+
+    def tearDown(self):
+      print('teardown')
 
     def test_add_positive_numbers(self):
         result = add(2, 3)
