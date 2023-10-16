@@ -13,7 +13,7 @@ class SortDictionaryModule:
   def __init__(self):
     pass
   
-  def sort_dictionary_by_value(self, in_dict: dict):
+  def sort_dictionary_by_value(self, in_dict: dict) -> dict:
     """
     """
     common_module.print_function(self.sort_dictionary_by_value)
@@ -22,7 +22,7 @@ class SortDictionaryModule:
 
     return sorted_dict
   
-  def sort_dictionary_by_key(self, in_dict):
+  def sort_dictionary_by_key(self, in_dict) -> dict:
     common_module.print_function(self.sort_dictionary_by_key)
     mylist = sorted(in_dict.items())
     sorted_dict = dict(mylist)

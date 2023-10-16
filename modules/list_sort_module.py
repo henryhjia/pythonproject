@@ -2,16 +2,23 @@
 Sort list
 @sortlist
 
-Two methods:
+Two methods for sorting a list:
 l2 = sorted(l1) - create a new list that is sorted
 l1.sort() - in place sort
 
+Three methods for soritng list of dictionary:
+    1. Sort a dictionary
+       a. sort dic.items() so it becomes a list of tuples
+       b. convert the list of tuple to a dictionary
+    2. Sort list of dictionaries
+       a. sort the list of dictionaires by using sorted(list_of_dict, key=lambda, x:x[''] notation)
+    3. Sort list of complex dictionary
 """
 import json
 import ast
 import common_module
 
-class SortListTester:
+class SortListModule:
   """
   """
   def __init__(self):
@@ -24,40 +31,24 @@ class SortListTester:
         {'name':'Bob', 'number':13}
     ]
 
-  def sort_sorted(self) -> None:
+  def sort_sorted(self, l1:list) -> list:
     """
     1. sorted()
     """
     common_module.print_function(self.sort_sorted)
-
-    l1 = [10, 9,4,6,20,1]
-
     l2 = sorted(l1)
-    print('original list=', l1)
-    print('sorted list  =', l2)
-
-    l1 = ['henry', 'claire', 'jean', 'maggie']
-    l2 = sorted(l1)
-    print('original list=', l1)
-    print('sorted list  =', l2)
-
-  def sort_in_place_sort(self):
+    return l2
+  
+  def sort_in_place_sort(self, l1: list) -> list:
     """
     2. sort() - in place sort
     """
     common_module.print_function(self.sort_in_place_sort)
-
-    l1 = [10, 9,4,6,20,1]
-    print('original list=', l1)
     l1.sort()
-    print('sorted list  =', l1)
 
-    l1 = ['henry', 'claire', 'jean', 'maggie']
-    print('original list=', l1)
-    l1.sort()
-    print('sorted list  =', l1)
-
-  def sort_integer_unique_mixed_data_type_in_list(self):
+    return l1
+  
+  def sort_integer_unique_mixed_data_type_in_list(self, mylist: list) -> list:
     """
     Given a list of different type, sort the integers in the list in asend order, 
     no duplicate
@@ -66,9 +57,6 @@ class SortListTester:
     common_module.print_function(self.sort_integer_unique_mixed_data_type_in_list)
 
     myset = set()
-    mylist = [3,2,1,10,6,7,2,1,"jia",'c']
-    print('original list=')
-    print(mylist)
 
     for elem in mylist:
       if type(elem) == int:
@@ -77,36 +65,17 @@ class SortListTester:
     outlist = list(myset)
     outlist.sort()
 
-    print('Sorted unique list=')
-    print(outlist)
+    return outlist
 
-  def sort_list_of_dictionary_by_value(self) -> None:
-    """
-    1. Sort a dictionary
-       a. sort dic.items() so it becomes a list of tuples
-       b. convert the list of tuple to a dictionary
-    2. Sort list of dictionaries
-       a. sort the list of dictionaires by using sort(list_of_dict, key=lambda, x:x[''] notation)
-    3. Sort list of complex dictionary
-    """
+  def sort_list_of_dictionary_by_value(self, in_list_dict: list) -> list:
     common_module.print_function(self.sort_list_of_dictionary_by_value)
+    sorted_list_of_dictionary = sorted(in_list_dict, key=lambda x:x['number'])
+    return sorted_list_of_dictionary
   
-    my_list_of_dict = [
-        {'name':'Sam', 'number': 11}, 
-        {'name':'Jan', 'number': 1},
-        {'name':'Kate', 'number':9},
-        {'name':'Bob', 'number':13}
-    ]
-    print('my_list_of_dict=', self._my_list_of_dict)
-    sorted_list_of_dictionary = sorted(self._my_list_of_dict, key=lambda x:x['number'])
-    print('sorted list of dictionary=', sorted_list_of_dictionary)
-
-  def sort_list_of_dictionary_by_key(self) -> None:
+  def sort_list_of_dictionary_by_key(self, in_list_dict: list) -> list:
     common_module.print_function(self.sort_list_of_dictionary_by_key)
-  
-    print('my_list_of_dict=', self._my_list_of_dict)
-    sorted_list_of_dictionary = sorted(self._my_list_of_dict, key=lambda x:x['name'])
-    print('sorted list of dictionary=', sorted_list_of_dictionary)
+    sorted_list_of_dictionary = sorted(in_list_dict, key=lambda x:x['name'])
+    return sorted_list_of_dictionary
 
   def sort_list_of_complex_dictionary(self) -> None:
     common_module.print_function(self.sort_list_of_complex_dictionary)
