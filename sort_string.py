@@ -18,8 +18,9 @@ def main(args: list=None) -> int:
   me = string_sort_module.SortStringTester()
 
   # sort string
-  result = me.sort_data(args[1])
-  print(result)
+  result = me.sort_string_data(args[1])
+  print('original string=', args[1])
+  print('sorted string=', result)
 
   # sort both alphabet and digit string with these criterias:
   # 1. lower case letter before upper case letter
@@ -30,7 +31,7 @@ def main(args: list=None) -> int:
   # 
 
   result = me.sort_alpha_digit(args[1])
-  print(result)
+  print('sorted string=', result)
 
 if __name__ == '__main__':
   main(sys.argv)

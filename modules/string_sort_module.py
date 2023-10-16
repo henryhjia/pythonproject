@@ -13,15 +13,15 @@ class SortStringTester:
   def __init__(self):
      pass
   
-  def sort_data(self, input_string: str) -> str:
+  def sort_string_data(self, input_string: str) -> str:
     """
     1. Sort string
     """
 
     sorted_list = sorted(input_string)
-    print(sorted_list)
+    # print(sorted_list)
     sorted_string = ''.join(sorted_list)
-    print('sorted_string=', sorted_string)
+    # print('sorted_string=', sorted_string)
 
     return sorted_string
 
