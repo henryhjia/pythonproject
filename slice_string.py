@@ -14,6 +14,8 @@ def main() -> int:
   in_str = 'ABCCDCDCDCDC'
   pattern = 'CDC'
 
+  print('original string=', in_str)
+  print('pattern=', pattern)
   result = me.find_string_by_coding(in_str, pattern)
   print(f'The total number of matching string is {result}')
 
