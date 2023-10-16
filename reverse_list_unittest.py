@@ -1,4 +1,3 @@
-#!/use/bin/python3
 """
 Reverse list unittest
 @reverselist unittest

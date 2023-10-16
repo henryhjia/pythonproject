@@ -18,26 +18,22 @@ If you want to reverse a string, you can achieve it using slicing
 class ReverseStringTester:
   """
   """
-  def reverse_data_using_slicing(self, in_str) -> None:
+  def reverse_data_using_slicing(self, in_str) -> str:
     """
     1. Reverse string
        NOTE: string does not have build-in reverse method
     """
-
     reversed_string = in_str[::-1]
-    print('original string=', in_str)
-    print('reversed string=', reversed_string)
+    return reversed_string
 
-  def reverse_data_manually(self, in_str) -> None:
+  def reverse_data_manually(self, in_str) -> str:
 
-    print('original string=', in_str)
     reverse_string=''
-
     str_len=len(in_str)
     for i in range(str_len):
       reverse_string += in_str[str_len-1-i]
     
-    print('reversed string=', reverse_string)
-
+    return reverse_string
+  
 if __name__ == '__main__':
     print('module only, not main')
