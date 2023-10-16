@@ -6,16 +6,24 @@ Sort dictionary
 """
 import dictionary_sort_module
 
-def main() -> int:
+def main() -> None:
 
-  me = dictionary_sort_module.SortDictionaryTester()
+  me = dictionary_sort_module.SortDictionaryModule()
 
   # Sort dictionary by value
-  me.sort_dictionary_by_value()
+  in_dict = { 
+      'Sam': 12, 
+      'Bob': 1, 
+      'Kate': 8, 
+      'Jan': 13
+    }
+  print(in_dict)
+  result = me.sort_dictionary_by_value(in_dict)
+  print(result)
 
   # Sort dictionary by key
-  me.sort_dictionary_by_key()
-
+  result = me.sort_dictionary_by_key(in_dict)
+  print(result)
 
 if __name__ == '__main__':
   main()
