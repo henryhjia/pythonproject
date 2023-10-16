@@ -22,8 +22,11 @@ class UnitTest(unittest.TestCase):
     # reverse list 
     list1 = [2,4,5,8]
     list2 = me.reverse_list_by_coding(list1)
-    list3 = me.reverse_list_by_coding(list2)
-    self.assertEqual(list1, list3)
+
+    self.assertEqual(list1[0], list2[3])
+    self.assertEqual(list1[1], list2[2])
+    self.assertEqual(list1[2], list2[1])
+    self.assertEqual(list1[3], list2[0])            
 
   def test_2_reverse_inplace(self):
 
@@ -34,7 +37,10 @@ class UnitTest(unittest.TestCase):
     list2 = list(list1)
     list1.reverse()
     
-    self.assertNotEqual(list1, list2)
+    self.assertEqual(list1[0], list2[3])
+    self.assertEqual(list1[1], list2[2])
+    self.assertEqual(list1[2], list2[1])
+    self.assertEqual(list1[3], list2[0])      
 
   def test_3_reverse_inplace(self):
 
@@ -43,8 +49,12 @@ class UnitTest(unittest.TestCase):
     # reverse list 
     list1 = [2,4,5,8]
     list2 = me.reverse_list_using_slicing(list1)
-    
-    self.assertNotEqual(list1, list2)
+
+    self.assertEqual(list1[0], list2[3])
+    self.assertEqual(list1[1], list2[2])
+    self.assertEqual(list1[2], list2[1])
+    self.assertEqual(list1[3], list2[0])      
+
 
 
 if __name__ == '__main__':
