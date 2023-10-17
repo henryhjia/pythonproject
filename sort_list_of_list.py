@@ -5,12 +5,12 @@ Sort list of list
 """
 import list_sort_module
 
-def main() -> int:
+def main() -> None:
 
-  me = list_sort_module.SortListTester()
+  me = list_sort_module.SortListModule()
 
   # sort data from variables
-  me.sort_list_of_list()
+  result = me.sort_list_of_list()
 
 
 if __name__ == '__main__':

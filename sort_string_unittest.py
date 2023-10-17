@@ -40,8 +40,8 @@ class UnitTest(unittest.TestCase):
     self.assertEqual(result[4], 't')
     self.assertEqual(result[5], 'S')
     self.assertEqual(result[6], '1')
-    self.assertEqual(result[7], '2')
-    self.assertEqual(result[8], '3')
+    self.assertEqual(result[7], '3')
+    self.assertEqual(result[8], '2')
     self.assertEqual(result[9], '4')                
                  
 

@@ -6,13 +6,46 @@ list and dictionary are populated in the program
 """
 import list_sort_module
 
-def main() -> int:
+def main() -> None:
 
-  me = list_sort_module.SortListTester()
+  me = list_sort_module.SortListModule()
 
-  me.sort_list_of_dictionary_by_value()
-  me.sort_list_of_dictionary_by_key()
-  me.sort_list_of_complex_dictionary()
+  # sort list of dictionary
+  my_list_of_dict = [
+    {'name':'Sam', 'number': 11}, 
+    {'name':'Jan', 'number': 1},
+    {'name':'Kate', 'number':9},
+    {'name':'Bob', 'number':13}
+  ]
+  print(my_list_of_dict)
+  result = me.sort_list_of_dictionary_by_value(my_list_of_dict)
+  print(result)
+
+  result = me.sort_list_of_dictionary_by_key(my_list_of_dict)
+  print(result)
+
+  my_list_of_dict = [
+      { "dad": ["Ted",32,72]},
+      { "mom": ["Karren",2,68]},
+      { "daughter": ["Sue",9,42]},
+      { "daughter": ["Linda",11,38]}
+  ]
+
+  result = me.sort_list_of_complex_dictionary(my_list_of_dict, 0)
+  print('sot by list index 0')
+  print(my_list_of_dict)
+  print(result)
+
+  result = me.sort_list_of_complex_dictionary(my_list_of_dict, 1)
+  print('sot by list index 1')
+  print(my_list_of_dict)
+  print(result)
+
+  result = me.sort_list_of_complex_dictionary(my_list_of_dict, 2)
+  print('sot by list index 2')  
+  print(my_list_of_dict)
+  print(result)
+
 
   # sort list of dictionaries, the list data is populated using json.loads() or ast.literal_eval() 
   # from string representation of a list of dictionary

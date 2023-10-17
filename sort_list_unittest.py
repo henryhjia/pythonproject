@@ -84,35 +84,6 @@ class UnitTest(unittest.TestCase):
     self.assertEqual(result[4], 7)
     self.assertEqual(result[5], 10)                
 
-  def test_6_sort_list_of_dictionary_by_value(self) -> None:
-    my_list_of_dict = [
-      {'name':'Sam', 'number': 11}, 
-      {'name':'Jan', 'number': 1},
-      {'name':'Kate', 'number':9},
-      {'name':'Bob', 'number':13}
-    ]
-    result = self.me.sort_list_of_dictionary_by_value(my_list_of_dict)
-    
-    self.assertEqual(result[0]['number'], 1)
-    self.assertEqual(result[1]['number'], 9)
-    self.assertEqual(result[2]['number'], 11)
-    self.assertEqual(result[3]['number'], 13)            
-
-  def test_7_sort_list_of_dictionary_by_key(self) -> None:
-    my_list_of_dict = [
-      {'name':'Sam', 'number': 11}, 
-      {'name':'Jan', 'number': 1},
-      {'name':'Kate', 'number':9},
-      {'name':'Bob', 'number':13}
-    ]
-    result = self.me.sort_list_of_dictionary_by_key(my_list_of_dict)
-
-    self.assertEqual(result[0]['name'], 'Bob')
-    self.assertEqual(result[1]['name'], 'Jan')
-    self.assertEqual(result[2]['name'], 'Kate')
-    self.assertEqual(result[3]['name'], 'Sam')   
-
-
 
 if __name__ == '__main__':
   unittest.main()

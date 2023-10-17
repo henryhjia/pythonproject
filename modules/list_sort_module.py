@@ -77,29 +77,15 @@ class SortListModule:
     sorted_list_of_dictionary = sorted(in_list_dict, key=lambda x:x['name'])
     return sorted_list_of_dictionary
 
-  def sort_list_of_complex_dictionary(self) -> None:
-    common_module.print_function(self.sort_list_of_complex_dictionary)
-
-    my_list_of_dict = [
-        { "dad": ["Ted",32,72]},
-        { "mom": ["Karren",2,68]},
-        { "daughter": ["Sue",9,42]},
-        { "daughter": ["Linda",11,38]}
-    ]
-    print('my_list_of_dict=', my_list_of_dict)
-
-    sorted_list = sorted(my_list_of_dict, key=lambda x:x[list(x.keys())[0]][1])     
-    print('sort by value 1:', sorted_list)
-
-    sorted_list = sorted(my_list_of_dict, key=lambda x:x[list(x.keys())[0]][2])     
-    print('sort by value 2:', sorted_list)
-
-    sorted_list = sorted(my_list_of_dict, key=lambda x:x[list(x.keys())[0]][0])     
-    print('sort by value 0:', sorted_list)
-
-    sorted_list = sorted(my_list_of_dict, key=lambda d: list(d.keys())[0])     
-    print('sort by key:    ', sorted_list)
-
+  def sort_list_of_complex_dictionary(self, my_list_of_dict: list, index: int) -> list:
+    """
+    @brief sort the list of dictionary, the value of the dictionary is a list, sort the 
+           dictionary by the index of the list
+    """
+    common_module.print_function(self.sort_list_of_complex_dictionary)       
+    sorted_list = sorted(my_list_of_dict, key=lambda x:x[list(x.keys())[0]][index])     
+    return sorted_list
+  
   def sort_list_of_list(self) -> None:
     """
     1. Sort list of list
