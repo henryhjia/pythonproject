@@ -1,5 +1,5 @@
 """
-Sort list
+Sort list module
 @sortlist
 
 Two methods for sorting a list:
@@ -20,20 +20,18 @@ import common_module
 
 class SortListModule:
   """
+  @brief This module provides various sorting list methods
   """
   def __init__(self):
     """
     """
-    self._my_list_of_dict = [
-        {'name':'Sam', 'number': 11}, 
-        {'name':'Jan', 'number': 1},
-        {'name':'Kate', 'number':9},
-        {'name':'Bob', 'number':13}
-    ]
+    pass
 
   def sort_sorted(self, l1:list) -> list:
     """
-    1. sorted()
+    @brief use Python build-in sorted() to sort a list
+    @param l1: input list
+    @return l2: sorted list
     """
     common_module.print_function(self.sort_sorted)
     l2 = sorted(l1)
@@ -41,7 +39,9 @@ class SortListModule:
   
   def sort_in_place_sort(self, l1: list) -> list:
     """
-    2. sort() - in place sort
+    @brief use Python build-in in-place sort()
+    @param l1: input list
+    @return sorted list
     """
     common_module.print_function(self.sort_in_place_sort)
     l1.sort()
@@ -50,9 +50,11 @@ class SortListModule:
   
   def sort_integer_unique_mixed_data_type_in_list(self, mylist: list) -> list:
     """
-    Given a list of different type, sort the integers in the list in asend order, 
+    @brief Given a list of different type, sort the integers in the list in asend order, 
     no duplicate
     Since it requires unique, a set is used
+    @param mulist: input list
+    @return a sorted list
     """
     common_module.print_function(self.sort_integer_unique_mixed_data_type_in_list)
 
@@ -68,11 +70,21 @@ class SortListModule:
     return outlist
 
   def sort_list_of_dictionary_by_value(self, in_list_dict: list) -> list:
+    """
+    @brief sort list of dictionary by value
+    @param in_list_dict: input list of dictionary
+    @return sorted list of dictionary (by value)
+    """
     common_module.print_function(self.sort_list_of_dictionary_by_value)
     sorted_list_of_dictionary = sorted(in_list_dict, key=lambda x:x['number'])
     return sorted_list_of_dictionary
   
   def sort_list_of_dictionary_by_key(self, in_list_dict: list) -> list:
+    """
+    @brief sort list of dictionary by key
+    @param in_list_dict: input list of dictionary
+    @return sorted list of dictionary (by key)    
+    """
     common_module.print_function(self.sort_list_of_dictionary_by_key)
     sorted_list_of_dictionary = sorted(in_list_dict, key=lambda x:x['name'])
     return sorted_list_of_dictionary
@@ -81,41 +93,23 @@ class SortListModule:
     """
     @brief sort the list of dictionary, the value of the dictionary is a list, sort the 
            dictionary by the index of the list
+    @param list: list of dictionary
+    @param index: index of the list, the index is used to sort
     """
     common_module.print_function(self.sort_list_of_complex_dictionary)       
     sorted_list = sorted(my_list_of_dict, key=lambda x:x[list(x.keys())[0]][index])     
     return sorted_list
   
-  def sort_list_of_list(self) -> None:
+  def sort_list_of_list(self, my_list, index: int) -> list:
     """
-    1. Sort list of list
+    @brief Sort list of list
+    @param my_list: list of list
+    @param index: sort the list base on the index of the innner list
+    @return sorted list
     """
     common_module.print_function(self.sort_list_of_list) 
-    
-    my_list = [
-      [1,2,3],
-      [3,2,1],
-      [2,5,5],
-      [0,1,4]
-    ]
-
-    for i in my_list:
-      print(i)
-
-    sorted_list = sorted(my_list, key=lambda x:x[0])
-    print('sort based on x[0]')
-    for i in sorted_list:
-      print(i)
-
-    sorted_list = sorted(my_list, key=lambda x:x[1])
-    print('sort based on x[1]')
-    for i in sorted_list:
-      print(i)
-
-    sorted_list = sorted(my_list, key=lambda x:x[2])
-    print('sort based on x[2]')
-    for i in sorted_list:
-      print(i)
+    sorted_list = sorted(my_list, key=lambda x:x[index])
+    return sorted_list
 
   def sort_by_price_ascending_by_price_ast_literal_eval(self, json_string):
       # convert to a list of dictionaries from a string json_string

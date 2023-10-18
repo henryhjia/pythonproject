@@ -1,4 +1,3 @@
-#!/use/bin/python3
 """
 Sort list of dictionary
 @sortlistofdictionary
