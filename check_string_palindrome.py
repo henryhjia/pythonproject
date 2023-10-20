@@ -2,7 +2,7 @@
 import io
 import string_process_module
 
-me = string_process_module.StringTester()
+me = string_process_module.StringProcessModule()
 
 s = "5 man, a plan, a canal: Panam5"
 

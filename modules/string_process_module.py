@@ -27,6 +27,9 @@ class StringProcessModule:
 
   def is_string_palindrome(self, s: str) -> bool:
     """
+    @brief check if a string is palindrome
+    @param s: string
+    @return bool: True if it is, otherwise False
     """
     common_module.print_function(self.is_string_palindrome)
 
@@ -35,8 +38,6 @@ class StringProcessModule:
     for c in s:
       if c.isalnum():
         lower_str += c.lower()
-    print(s)
-    print(lower_str)
 
     if lower_str == lower_str[::-1]:
       return True
@@ -45,6 +46,9 @@ class StringProcessModule:
 
   def is_string_palindrome_method2(self, s: str) -> bool:
     """
+    @brief check if a string is palindrome method 2
+    @param s: in string
+    @return bool: True if palindrome, otherwise False
     """
     common_module.print_function(self.is_string_palindrome_method2)
 
@@ -54,13 +58,9 @@ class StringProcessModule:
         lower_str += c.lower()
 
     len_lower_str = len(lower_str)
-    print(lower_str)
-    print('len_lower_str=',len_lower_str)
     half = len_lower_str // 2
-    print('half=',half)
 
     for i in range(half):
-      print('i=',i, lower_str[i], lower_str[len_lower_str - i - 1])
       if lower_str[i] != lower_str[len_lower_str - i - 1]:
         return False
       
