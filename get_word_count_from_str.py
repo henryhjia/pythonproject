@@ -2,8 +2,8 @@ import io
 import string_process_module
 
 stream = io.StringIO("Hey! How are you?\nI am good, how about you?\nI am good too.")
-
-me = string_process_module.StringTester()
+print(type(stream))
+me = string_process_module.StringProcessModule()
 word = 'good'
 result = me.count_occurrence(word, stream)
 print('stream=', stream.getvalue())

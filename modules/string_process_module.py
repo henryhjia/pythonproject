@@ -6,7 +6,7 @@ This class contains various string processing methods
 """
 import common_module
 
-class StringTester:
+class StringProcessModule:
   """
   """
   def __init__(self):
@@ -14,9 +14,9 @@ class StringTester:
      
   def count_occurrence(self, to_search, stream) -> int:
     """
-    @param: to_search: (String) The text to search for
-    @param: stream: (StringIO) An in-memory stream for text I/O
-    @return: (int) The number of lines that contain to_search
+    @param to_search: (String) The text to search for
+    @param stream: (StringIO) An in-memory stream for text I/O
+    @return count: (int) The number of lines that contain to_search
     """
     count = 0
     for str in stream:
