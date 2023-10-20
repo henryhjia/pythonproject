@@ -12,35 +12,38 @@ class ProcessListModule:
   """
   def __init__(self):
     pass
-  
-  def get_list_with_2nd_min_value_in_dictionary(self, in_dict) -> list:
-    ""
-    common_module.print_function(self.get_list_with_2nd_min_value_in_dictionary)
+     
+  # def get_list_with_2nd_min_value_in_dictionary(self, in_dict) -> list:
+  #   ""
+  #   common_module.print_function(self.get_list_with_2nd_min_value_in_dictionary)
 
-    print('input dict=', in_dict)
+  #   print('input dict=', in_dict)
 
-    value_list = list(in_dict.values())
-    value_list.sort()
-    print('sorted values=', value_list)    
-    min = value_list[0]
-    second_min = 0
-    for i in value_list:
-      if i > min:
-        second_min = i
-        break
+  #   value_list = list(in_dict.values())
+  #   value_list.sort()
+  #   print('sorted values=', value_list)    
+  #   min = value_list[0]
+  #   second_min = 0
+  #   for i in value_list:
+  #     if i > min:
+  #       second_min = i
+  #       break
 
-    print(f'second minimum value = {second_min}')
+  #   print(f'second minimum value = {second_min}')
 
-    new_list = []
-    for key, value in in_dict.items():
-      print(key, value)
-      if value == second_min:
-        new_list.append(key)
+  #   new_list = []
+  #   for key, value in in_dict.items():
+  #     print(key, value)
+  #     if value == second_min:
+  #       new_list.append(key)
 
-    return new_list
+  #   return new_list
   
   def reverse_list_by_coding(self, in_list: list) -> list:
     """
+    @brief reverse a list with a for loop
+    @param in_list: list
+    @return a list with item reversed
     """
     common_module.print_function(self.reverse_list_by_coding)
 
@@ -54,7 +57,9 @@ class ProcessListModule:
 
   def reverse_list_using_slicing(self, in_list: list) -> list:
     """
-    A copy of a reversed list is generated
+    @brief reverse a string using slicing.  A copy of a reversed list is generated
+    @param in_list: list
+    @return list in revered order
     """
     common_module.print_function(self.reverse_list_using_slicing)
     out_list = in_list[::-1]

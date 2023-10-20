@@ -1,6 +1,6 @@
 """
-sort list unittest
-@sortlist unittest
+get list moving total unittest
+@listmovingtotal unittest
 
 usage: python3 -m unittest get_list_moving_total_unittest.UnitTest -v
 
@@ -12,10 +12,6 @@ class UnitTest(unittest.TestCase):
   def setUp(self):
     print('setup')
     self.me = list_process_module.ProcessListModule()
-
-
-    self.test_str = '[{"name":"eggs","price":1},{"name":"coffee","price":9.99},{"name":"rice","price":4.04}]'
-    self.test_str2 = '{"eggs":1, "coffee":9.99, "rice":4.04}'
 
   def tearDown(self):
     print('teardown')          
