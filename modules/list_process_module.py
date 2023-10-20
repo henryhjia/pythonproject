@@ -7,7 +7,7 @@ methods for processing a list
 """
 import common_module
 
-class ProcessList:
+class ProcessListModule:
   """
   """
   def __init__(self):
@@ -63,14 +63,14 @@ class ProcessList:
 
   def list_moving_total_contains(self, in_list, total):
     """
-    @in_list: list of integers
+    @brief calculate sum of 3 connected item, and check if the sum is the same as total
+    @param in_list: list of integers
     @param total: (int) The total to check for.
-    @return: (bool) If moving total contains the total, count it.  Return the final count
+    @return ret_value: bool, If moving total contains the total return True, otherwise False
     """
     common_module.print_function(self.list_moving_total_contains)
     
     list_len = len(in_list)
-    print(in_list, 'total=', total)
     mysumlist = []
     mysum = 0
     for i in range(list_len):
@@ -79,7 +79,7 @@ class ProcessList:
           mysum = sum(sub_list)
           mysumlist.append(mysum)
           mysum = 0
-    
+
     ret_value = False
     for item in mysumlist:
         if item == total:

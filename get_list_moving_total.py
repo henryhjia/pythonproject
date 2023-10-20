@@ -3,7 +3,7 @@
 import list_process_module
     
 def main():
-  me = list_process_module.ProcessList()
+  me = list_process_module.ProcessListModule()
   print(me.list_moving_total_contains([1, 2, 3, 4], 6))
   print(me.list_moving_total_contains([1, 2, 3, 4], 9))
   print(me.list_moving_total_contains([1, 2, 3, 4], 12))
