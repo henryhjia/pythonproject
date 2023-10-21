@@ -18,7 +18,7 @@ import json
 import ast
 import common_module
 
-class SortListModule:
+class ListSortModule:
   """
   @brief This module provides various sorting list methods
   """

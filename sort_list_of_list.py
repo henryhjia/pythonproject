@@ -7,7 +7,7 @@ import list_sort_module
 
 def main() -> None:
 
-  me = list_sort_module.SortListModule()
+  me = list_sort_module.ListSortModule()
 
   # sort data from variables
   my_list = [

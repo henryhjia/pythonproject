@@ -11,7 +11,7 @@ import string_slicing_module
 class UnitTest(unittest.TestCase):
   def setUp(self):
     print('setup')
-    self.me = string_slicing_module.StringSlicingTester()
+    self.me = string_slicing_module.StringSlicingModule()
 
   def tearDown(self):
     print('teardown')
@@ -21,7 +21,7 @@ class UnitTest(unittest.TestCase):
     # find a string
     in_str = 'ABCCDCDCDCDC'
     pattern = 'CDC'
-    result = self.me.find_string_by_coding(in_str, pattern)
+    result = self.me.find_string_using_looping(in_str, pattern)
     self.assertEqual(result, 4)
 
   def test_2_reverse_data_manually(self):

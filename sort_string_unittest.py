@@ -11,7 +11,7 @@ import string_sort_module
 class UnitTest(unittest.TestCase):
   def setUp(self):
     print('setup')
-    self.me = string_sort_module.SortStringTester()
+    self.me = string_sort_module.StringSortModule()
     self.data = "google"
 
   def tearDown(self):

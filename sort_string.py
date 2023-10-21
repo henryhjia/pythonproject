@@ -15,7 +15,7 @@ def main(args: list=None) -> int:
     print('usage:', args[0], 'google')
     exit(1)
 
-  me = string_sort_module.SortStringTester()
+  me = string_sort_module.StringSortModule()
 
   # sort string
   result = me.sort_string_data(args[1])

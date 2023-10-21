@@ -12,7 +12,7 @@ import list_sort_module
 
 def main() -> None:
 
-  me = list_sort_module.SortListModule()
+  me = list_sort_module.ListSortModule()
 
   # Use sorted() method
   l1 = [10, 9,4,6,20,1]

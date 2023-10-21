@@ -30,7 +30,7 @@ def main(args: list=None) -> int:
   reversed_str = me.reverse_data_using_slicing(args[1])
   print('reversed string=', reversed_str)
 
-  reversed_str = me.reverse_data_manually(args[1])
+  reversed_str = me.reverse_data_using_looping(args[1])
   print('reversed string=', reversed_str)
 
 if __name__ == '__main__':

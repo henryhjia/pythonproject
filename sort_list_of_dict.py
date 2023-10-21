@@ -7,7 +7,7 @@ import list_sort_module
 
 def main() -> None:
 
-  me = list_sort_module.SortListModule()
+  me = list_sort_module.ListSortModule()
 
   # sort list of dictionary
   my_list_of_dict = [

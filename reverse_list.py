@@ -11,14 +11,14 @@ reverse a list : three methods
 
 import list_process_module
 
-def main() -> int:
+def main() -> None:
   """
   """
-  me = list_process_module.ProcessList()
+  me = list_process_module.ListProcessModule()
 
   # reverse list 
   list1 = [2,4,5,8]
-  list2 = me.reverse_list_by_coding(list1)
+  list2 = me.reverse_list_using_looping(list1)
   print('original list=', list1)
   print('reversed list=', list2)
 

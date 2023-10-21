@@ -11,7 +11,7 @@ import list_sort_module
 class UnitTest(unittest.TestCase):
   def setUp(self):
     print('setup')
-    self.me = list_sort_module.SortListModule()
+    self.me = list_sort_module.ListSortModule()
     self.my_list_of_dict = [
       {'name':'Sam', 'number': 11}, 
       {'name':'Jan', 'number': 1},

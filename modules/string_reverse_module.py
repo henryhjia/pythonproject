@@ -20,14 +20,20 @@ class ReverseStringTester:
   """
   def reverse_data_using_slicing(self, in_str) -> str:
     """
-    1. Reverse string
+    @brief Reverse string by slicing
        NOTE: string does not have build-in reverse method
+    @param in_str: string
+    @return reversed_string: string
     """
     reversed_string = in_str[::-1]
     return reversed_string
 
-  def reverse_data_manually(self, in_str) -> str:
-
+  def reverse_data_using_looping(self, in_str) -> str:
+    """
+    @brief Reverse string by looping
+    @param in_str: string
+    @return reversed_string: string
+    """    
     reverse_string=''
     str_len=len(in_str)
     for i in range(str_len):

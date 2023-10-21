@@ -5,10 +5,10 @@ string slicing
 """
 import string_slicing_module
   
-def main() -> int:
+def main() -> None:
   """
   """
-  me = string_slicing_module.StringSlicingTester()
+  me = string_slicing_module.StringSlicingModule()
 
   # find a string
   in_str = 'ABCCDCDCDCDC'
@@ -16,7 +16,7 @@ def main() -> int:
 
   print('original string=', in_str)
   print('pattern=', pattern)
-  result = me.find_string_by_coding(in_str, pattern)
+  result = me.find_string_using_looping(in_str, pattern)
   print(f'The total number of matching string is {result}')
 
   result = me.find_string_using_slicing(in_str, pattern)

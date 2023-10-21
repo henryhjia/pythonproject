@@ -15,7 +15,7 @@ import list_process_module
 class UnitTest(unittest.TestCase):
   def setUp(self):
     print('setup')
-    self.me = list_process_module.ProcessList()
+    self.me = list_process_module.ListProcessModule()
 
   def tearDown(self):
     print('teardown')
@@ -24,7 +24,7 @@ class UnitTest(unittest.TestCase):
 
     # reverse list 
     list1 = [2,4,5,8]
-    list2 = self.me.reverse_list_by_coding(list1)
+    list2 = self.me.reverse_list_using_looping(list1)
 
     self.assertEqual(list1[0], list2[3])
     self.assertEqual(list1[1], list2[2])

@@ -11,7 +11,7 @@ import list_process_module
 class UnitTest(unittest.TestCase):
   def setUp(self):
     print('setup')
-    self.me = list_process_module.ProcessListModule()
+    self.me = list_process_module.ListProcessModule()
 
   def tearDown(self):
     print('teardown')          

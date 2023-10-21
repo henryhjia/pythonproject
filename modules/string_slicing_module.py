@@ -4,7 +4,7 @@
 @stringslicing
 """
 
-class StringSlicingTester:
+class StringSlicingModule:
   """
   @brief
   """
@@ -14,7 +14,13 @@ class StringSlicingTester:
     """
     pass
 
-  def find_string_by_coding(self, in_str: str, pattern: str) -> int:
+  def find_string_using_looping(self, in_str: str, pattern: str) -> int:
+    """
+    @brief find a string by using loop
+    @param in_str: string
+    @param pattern: string
+    @return result: int, total number of matching string
+    """
     result = 0
     pattern_len = len(pattern)
     word = ''
@@ -29,6 +35,12 @@ class StringSlicingTester:
     return result
 
   def find_string_using_slicing(self, in_str: str, pattern: str) -> int:
+    """
+    @brief find a string by using slicing
+    @param in_str: string
+    @param pattern: string
+    @return result: int  , total number of matching string  
+    """
     sum = 0
     pattern_len = len(pattern)
     for i in range(len(in_str) - pattern_len + 1):

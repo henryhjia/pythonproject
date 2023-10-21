@@ -11,7 +11,7 @@ import list_sort_module
 class UnitTest(unittest.TestCase):
   def setUp(self):
     print('setup')
-    self.me = list_sort_module.SortListModule()
+    self.me = list_sort_module.ListSortModule()
 
   def tearDown(self):
     print('teardown')

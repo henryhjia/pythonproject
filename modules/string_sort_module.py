@@ -7,7 +7,7 @@ To sort the characters of the string 'google' in alphabetical order, you can use
 function to create a sorted list of characters and then join() them back into a string.
 """
 
-class SortStringTester:
+class StringSortModule:
   """
   """
   def __init__(self):
@@ -15,7 +15,9 @@ class SortStringTester:
   
   def sort_string_data(self, input_string: str) -> str:
     """
-    1. Sort string
+    @brief Sort string
+    @param input_string: str
+    @return sorted_string: str
     """
     sorted_list = sorted(input_string)
     sorted_string = ''.join(sorted_list)
@@ -23,12 +25,14 @@ class SortStringTester:
     return sorted_string
 
   def sort_alpha_digit(self, input_string: str) -> str:
-    # sort both alphabet and digit string with these criterias:
-    # 1. lower case letter before upper case letter
-    # 2. alphebet before digit
-    # 3. odd digit before even digit
-    # an example: Sorted1234
-    # result: deortS1324
+    # @brief sort both alphabet and digit string with these criterias:
+    #        1. lower case letter before upper case letter
+    #        2. alphebet before digit
+    #        3. odd digit before even digit
+    #        an example: Sorted1234
+    #        result: deortS1324
+    # @param input_string: str
+    # @return result: str, sorted string
     l1 = []
     l2 = []
     l3 = []

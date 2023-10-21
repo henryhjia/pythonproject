@@ -32,7 +32,7 @@ class UnitTest(unittest.TestCase):
 
   def test_2_reverse_data_manually(self):
     orig_string = "amazon"    
-    reversed_string = self.me.reverse_data_manually(orig_string)
+    reversed_string = self.me.reverse_data_using_looping(orig_string)
 
     self.assertEqual(reversed_string[0], orig_string[5])
     self.assertEqual(reversed_string[1], orig_string[4])
