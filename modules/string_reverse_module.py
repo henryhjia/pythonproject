@@ -5,7 +5,7 @@
 
 Two methods:
 1. string slicing
-2. manual
+2. string looping
 
 In Python, strings do not have a built-in reverse() method. Unlike lists, strings 
 are immutable, which means their contents cannot be modified after creation. 
@@ -15,7 +15,7 @@ order of characters in-place.
 If you want to reverse a string, you can achieve it using slicing
 """
 
-class ReverseStringTester:
+class StringReverseModule:
   """
   """
   def reverse_data_using_slicing(self, in_str) -> str:

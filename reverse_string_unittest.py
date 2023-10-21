@@ -14,7 +14,7 @@ import string_reverse_module
 class UnitTest(unittest.TestCase):
   def setUp(self):
     print('setup')
-    self.me = string_reverse_module.ReverseStringTester()
+    self.me = string_reverse_module.StringReverseModule()
 
   def tearDown(self):
     print('teardown')

@@ -17,13 +17,13 @@ If you want to reverse a string, you can achieve it using slicing
 import string_reverse_module
 import sys
 
-def main(args: list=None) -> int:
+def main(args: list=None) -> None:
   print(f'lengh of argument : {len(args)}')
   if len(args) < 2:
     print('usage:', args[0], 'google')
     exit(1)
 
-  me = string_reverse_module.ReverseStringTester()
+  me = string_reverse_module.StringReverseModule()
 
   print('original str=', args[1])
   # reverse strings
