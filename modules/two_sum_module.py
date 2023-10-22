@@ -7,7 +7,7 @@ if so, return the two numbers
 @target
 """
 
-class TwoSumTester:
+class TwoSumModule:
   """
   @brief
   """
@@ -19,8 +19,11 @@ class TwoSumTester:
 
   def find_two_sum_equal_to_target(self, in_list: list, target: int) -> list:
     """
+    @brief calculate two sum from a list, compare it with the target
+    @param in_list: list
+    @param targer: int
+    @return list
     """
-    print(in_list, target, len(in_list))
 
     for i in range(len(in_list)-1):
        if (in_list[i] + in_list[i+1]) == target:
