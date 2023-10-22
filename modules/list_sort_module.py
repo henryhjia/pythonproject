@@ -111,96 +111,126 @@ class ListSortModule:
     sorted_list = sorted(my_list, key=lambda x:x[index])
     return sorted_list
 
-  def sort_by_price_ascending_by_price_ast_literal_eval(self, json_string):
-      # convert to a list of dictionaries from a string json_string
-      # method 1:
-      list_of_dictionaries = ast.literal_eval(json_string)
+  def sort_by_price_ascending_by_price_ast_literal_eval(self, json_string: str) -> list:
+    """
+    @brief convert to a list of dictionaries from a string json_string
+    @param json_string: str
+    @return sorted_list: list
+    """
+    list_of_dictionaries = ast.literal_eval(json_string)
 
-      # sort the list of dictionaires by the value 'price' in the dictionary
-      sorted_list = sorted(list_of_dictionaries, key=lambda x:x['price'])
+    # sort the list of dictionaires by the value 'price' in the dictionary
+    sorted_list = sorted(list_of_dictionaries, key=lambda x:x['price'])
 
-      return sorted_list
+    return sorted_list
 
-  def sort_by_price_ascending_by_price_json_loads(self, json_string):
-      # convert to a list of dictionaries from a string json_string
-      # method 2:
-      list_of_dictionaries = json.loads(json_string)
+  def sort_by_price_ascending_by_price_json_loads(self, json_string: str) -> list:
+    """
+    @brief convert to a list of dictionaries from a string json_string
+    @param json_string: str
+    @return sorted_list: list  
+    """
+    list_of_dictionaries = json.loads(json_string)
 
-      # sort the list of dictionaires by the value 'price' in the dictionary
-      sorted_list = sorted(list_of_dictionaries, key=lambda x:x['price'])
+    # sort the list of dictionaires by the value 'price' in the dictionary
+    sorted_list = sorted(list_of_dictionaries, key=lambda x:x['price'])
 
-      return sorted_list
+    return sorted_list
 
-  def sort_by_price_ascending_by_name_ast_literal_eval(self, json_string):
-      # convert to a list of dictionaries from a string json_string
-      # method 1:
-      list_of_dictionaries = ast.literal_eval(json_string)
+  def sort_by_price_ascending_by_name_ast_literal_eval(self, json_string: str) -> list:
+    """
+    @brief convert to a list of dictionaries from a string json_string
+    @param json_string: str
+    @return sorted_list: list
+    """
+    list_of_dictionaries = ast.literal_eval(json_string)
 
-      # sort the list of dictionaires by the value 'price' in the dictionary
-      sorted_list = sorted(list_of_dictionaries, key=lambda x:x['name'])
+    # sort the list of dictionaires by the value 'price' in the dictionary
+    sorted_list = sorted(list_of_dictionaries, key=lambda x:x['name'])
 
-      return sorted_list
+    return sorted_list
 
-  def sort_by_price_ascending_by_name_json_loads(self, json_string):
-      # convert to a list of dictionaries from a string json_string
-      # method 2:
-      list_of_dictionaries = json.loads(json_string)
+  def sort_by_price_ascending_by_name_json_loads(self, json_string: str) -> list:
+    """
+    @brief convert to a list of dictionaries from a string json_string
+    @param json_string: str
+    @return sorted_list: list
+    """
+    list_of_dictionaries = json.loads(json_string)
 
-      # sort the list of dictionaires by the value 'price' in the dictionary
-      sorted_list = sorted(list_of_dictionaries, key=lambda x:x['name'])
+    # sort the list of dictionaires by the value 'price' in the dictionary
+    sorted_list = sorted(list_of_dictionaries, key=lambda x:x['name'])
 
-      return sorted_list
+    return sorted_list
 
-  def sort_by_price_descending_by_name(self, json_string):
-      # convert to a list of dictionaries from a string json_string
-      # method 2:
-      list_of_dictionaries = json.loads(json_string)
+  def sort_by_price_descending_by_name(self, json_string: str) -> list:
+    """
+    @brief convert to a list of dictionaries from a string json_string
+    @param json_string: str
+    @return sorted_list: list
+    """
+    list_of_dictionaries = json.loads(json_string)
 
-      # sort the list of dictionaires by the value 'price' in the dictionary
-      sorted_list = sorted(list_of_dictionaries, key=lambda x:x['name'], reverse=True)
+    # sort the list of dictionaires by the value 'price' in the dictionary
+    sorted_list = sorted(list_of_dictionaries, key=lambda x:x['name'], reverse=True)
 
-      return sorted_list
+    return sorted_list
 
-  def sort_by_price_descending_by_price(self, json_string):
-      # convert to a list of dictionaries from a string json_string
-      # method 2:
-      list_of_dictionaries = json.loads(json_string)
+  def sort_by_price_descending_by_price(self, json_string: str) -> list:
+    """
+    @brief convert to a list of dictionaries from a string json_string
+    @param json_string: str
+    @return sorted_list: list        
+    """
+    list_of_dictionaries = json.loads(json_string)
 
-      # sort the list of dictionaires by the value 'price' in the dictionary
-      sorted_list = sorted(list_of_dictionaries, key=lambda x:x['price'], reverse=True)
+    # sort the list of dictionaires by the value 'price' in the dictionary
+    sorted_list = sorted(list_of_dictionaries, key=lambda x:x['price'], reverse=True)
 
-      return sorted_list
+    return sorted_list
 
-  def sort_by_price_ascending_by_key(self, json_string):
-      # convert to a dictionaries from a string json_string, then sort dictionary by key
+  def sort_by_price_ascending_by_key(self, json_string: str) -> dict:
+    """
+    @brief convert to a dictionaries from a string json_string, then sort dictionary by key
+    @param json_string: str
+    @return sorted_dict: dict
+    """
+    mydic = json.loads(json_string)
+    mysorted_list = sorted(mydic.items())
+    sorted_dict = dict(mysorted_list)
 
-      mydic = json.loads(json_string)
-      mysorted_list = sorted(mydic.items())
-      sorted_dict = dict(mysorted_list)
+    return sorted_dict
 
-      return sorted_dict
-
-  def sort_by_price_ascending_by_value(self, json_string):
-      # convert to a dictionaries from a string json_string, then sort dictionary by value
-
+  def sort_by_price_ascending_by_value(self, json_string: str) -> dict:
+      """
+      @brief convert to a dictionaries from a string json_string, then sort dictionary by value
+      @param json_string str
+      @return sorted_dict: dict
+      """
       mydic = json.loads(json_string)
       mysorted_list = sorted(mydic.items(), key=lambda x:x[1])
       sorted_dict = dict(mysorted_list)
 
       return sorted_dict
 
-  def sort_by_price_descending_by_key(self, json_string):
-      # convert to a dictionaries from a string json_string, then sort dictionary by value
-
+  def sort_by_price_descending_by_key(self, json_string: str) -> dict:
+      """
+      @brief convert to a dictionaries from a string json_string, then sort dictionary by value
+      @param json_string: str
+      @return sorted_dict: dict
+      """
       mydic = json.loads(json_string)
       mysorted_list = sorted(mydic.items(), reverse=True)
       sorted_dict = dict(mysorted_list)
 
       return sorted_dict
 
-  def sort_by_price_descending_by_value(self, json_string):
-      # convert to a dictionaries from a string json_string, then sort dictionary by value
-
+  def sort_by_price_descending_by_value(self, json_string: str) -> dict:
+      """
+      @brief convert to a dictionaries from a string json_string, then sort dictionary by value
+      @param json_string: str
+      @return sorted_dict: dict
+      """
       mydic = json.loads(json_string)
       mysorted_list = sorted(mydic.items(), key=lambda x:x[1], reverse=True)
       sorted_dict = dict(mysorted_list)
