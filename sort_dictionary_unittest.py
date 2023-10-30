@@ -6,12 +6,13 @@ usage: python3 -m unittest sort_dictionary_unittest.UnitTest -v
 
 """
 import unittest
-import dictionary_sort_module
+from hjlibrary.dictionary_sort_module import SortDictionaryModule
 
 class UnitTest(unittest.TestCase):
   def setUp(self):
     print('setup')
-    self.me = dictionary_sort_module.SortDictionaryModule()
+    # self.me = dictionary_sort_module.SortDictionaryModule()
+    self.me = SortDictionaryModule()
     self.in_dict = { 
         'Sam': 12, 
         'Bob': 1, 
