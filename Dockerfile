@@ -1,6 +1,6 @@
 FROM python:3
 WORKDIR /app
-COPY map.py /app
+COPY slice_string.py /app
+COPY ./modules/string_slicing_module.py /app
 
-
-CMD ["python3","map.py"]
+CMD ["python3","slice_string.py"]
