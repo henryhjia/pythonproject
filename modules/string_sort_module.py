@@ -3,8 +3,15 @@
 @brief Sort string
 @sortstring
 
-To sort the characters of the string 'google' in alphabetical order, you can use the sorted() 
-function to create a sorted list of characters and then join() them back into a string.
+Two string sorting methods are provided here:
+
+1. To sort the characters of the string 'google' in alphabetical order, you can use the sorted() 
+   function to create a sorted list of characters and then join() them back into a string.
+2. A specific sorting for a mix string of alphabet and digit with specfific criteria:
+   a. lower case letter before upper case letter
+   b. alphebet before digit
+   c. odd digit before even digit
+
 """
 
 class StringSortModule:

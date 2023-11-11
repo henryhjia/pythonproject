@@ -9,7 +9,7 @@ function to create a sorted list of characters and then join() them back into a 
 import sys
 import string_sort_module
 
-def main(args: list=None) -> int:
+def main(args: list=None) -> None:
   print(f'lengh of argument : {len(args)}')
   if len(args) < 2:
     print('usage:', args[0], 'google')
