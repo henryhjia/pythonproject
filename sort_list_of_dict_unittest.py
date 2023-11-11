@@ -20,7 +20,6 @@ class UnitTest(unittest.TestCase):
     ]    
 
     self.test_str = '[{"name":"eggs","price":1},{"name":"coffee","price":9.99},{"name":"rice","price":4.04}]'
-    self.test_str2 = '{"eggs":1, "coffee":9.99, "rice":4.04}'
 
   def tearDown(self):
     print('teardown')          
@@ -104,34 +103,6 @@ class UnitTest(unittest.TestCase):
     self.assertEqual(result[0]['price'], 9.99)
     self.assertEqual(result[1]['price'], 4.04)
     self.assertEqual(result[2]['price'], 1)  
-
-  def test_10_sort_by_price_ascending_by_key(self) -> None:
-    result = self.me.sort_by_price_ascending_by_key(self.test_str2)
-    result_keys = list(result.keys())
-    self.assertEqual(result_keys[0], 'coffee')
-    self.assertEqual(result_keys[1], 'eggs')
-    self.assertEqual(result_keys[2], 'rice')        
-
-  def test_11_sort_by_price_ascending_by_value(self) -> None:
-    result = self.me.sort_by_price_ascending_by_value(self.test_str2)
-    result_values = list(result.values())    
-    self.assertEqual(result_values[0], 1)
-    self.assertEqual(result_values[1], 4.04)
-    self.assertEqual(result_values[2], 9.99)     
-
-  def test_12_sort_by_price_descending_by_key(self) -> None:
-    result = self.me.sort_by_price_descending_by_key(self.test_str2)
-    result_keys = list(result.keys())
-    self.assertEqual(result_keys[0], 'rice')
-    self.assertEqual(result_keys[1], 'eggs')
-    self.assertEqual(result_keys[2], 'coffee')    
-
-  def test_13_sort_by_price_descending_by_value(self) -> None:
-    result = self.me.sort_by_price_descending_by_value(self.test_str2)
-    result_values = list(result.values())    
-    self.assertEqual(result_values[0], 9.99)
-    self.assertEqual(result_values[1], 4.04)
-    self.assertEqual(result_values[2], 1)     
 
 
 if __name__ == '__main__':

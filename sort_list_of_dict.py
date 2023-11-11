@@ -76,17 +76,17 @@ def main() -> None:
   order += 1
 
   # for string data '{"eggs":1, "coffee":9.99, "rice":4.04}'
-  str2 = '{"eggs":1, "coffee":9.99, "rice":4.04}'
-  print(f'{order: 3d}', me.sort_by_price_ascending_by_key(str2))
-  order += 1
+  # str2 = '{"eggs":1, "coffee":9.99, "rice":4.04}'
+  # print(f'{order: 3d}', me.sort_by_price_ascending_by_key(str2))
+  # order += 1
 
-  print(f'{order: 3d}', me.sort_by_price_ascending_by_value(str2))
-  order += 1
+  # print(f'{order: 3d}', me.sort_by_price_ascending_by_value(str2))
+  # order += 1
 
-  print(f'{order: 3d}', me.sort_by_price_descending_by_key(str2))
-  order += 1
+  # print(f'{order: 3d}', me.sort_by_price_descending_by_key(str2))
+  # order += 1
 
-  print(f'{order: 3d}', me.sort_by_price_descending_by_value(str2))
+  # print(f'{order: 3d}', me.sort_by_price_descending_by_value(str2))
 
 if __name__ == '__main__':
   main()

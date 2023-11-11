@@ -6,6 +6,7 @@ dictionary sort
 methods for sorting a dictionary
 """
 import common_module
+import json
 
 class SortDictionaryModule:
   """
@@ -36,6 +37,54 @@ class SortDictionaryModule:
     sorted_dict = dict(mylist)
 
     return sorted_dict
-  
+
+  def sort_by_price_ascending_by_key(self, json_string: str) -> dict:
+    """
+    @brief convert to a dictionaries from a string json_string, then sort dictionary by key
+    @param json_string: str
+    @return sorted_dict: dict
+    """
+    mydic = json.loads(json_string)
+    mysorted_list = sorted(mydic.items())
+    sorted_dict = dict(mysorted_list)
+
+    return sorted_dict
+
+  def sort_by_price_ascending_by_value(self, json_string: str) -> dict:
+      """
+      @brief convert to a dictionaries from a string json_string, then sort dictionary by value
+      @param json_string str
+      @return sorted_dict: dict
+      """
+      mydic = json.loads(json_string)
+      mysorted_list = sorted(mydic.items(), key=lambda x:x[1])
+      sorted_dict = dict(mysorted_list)
+
+      return sorted_dict
+
+  def sort_by_price_descending_by_key(self, json_string: str) -> dict:
+      """
+      @brief convert to a dictionaries from a string json_string, then sort dictionary by value
+      @param json_string: str
+      @return sorted_dict: dict
+      """
+      mydic = json.loads(json_string)
+      mysorted_list = sorted(mydic.items(), reverse=True)
+      sorted_dict = dict(mysorted_list)
+
+      return sorted_dict
+
+  def sort_by_price_descending_by_value(self, json_string: str) -> dict:
+      """
+      @brief convert to a dictionaries from a string json_string, then sort dictionary by value
+      @param json_string: str
+      @return sorted_dict: dict
+      """
+      mydic = json.loads(json_string)
+      mysorted_list = sorted(mydic.items(), key=lambda x:x[1], reverse=True)
+      sorted_dict = dict(mysorted_list)
+
+      return sorted_dict
+    
 if __name__ == '__main__':
     print('module only, not main')

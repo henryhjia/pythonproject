@@ -5,16 +5,13 @@ Sort list module
 @brief  This module provides sort of list and sort of list of dictionaries methods
 
 Two methods for sorting a list:
-l2 = sorted(l1) - create a new list that is sorted
-l1.sort() - in place sort
+  1. l2 = sorted(l1) - create a new list that is sorted
+  2. l1.sort() - in place sort
 
-Three methods for soritng list of dictionary:
-    1. Sort a dictionary
-       a. sort dic.items() so it becomes a list of tuples
-       b. convert the list of tuple to a dictionary
-    2. Sort list of dictionaries
-       a. sort the list of dictionaires by using sorted(list_of_dict, key=lambda, x:x[''] notation)
-    3. Sort list of complex dictionary
+Two methods for soritng list of dictionary:
+  1. Sort list of dictionaries
+     a. sort the list of dictionaires by using sorted(list_of_dict, key=lambda, x:x[''] notation)
+  2. Sort list of complex dictionary
 """
 import json
 import ast
@@ -198,53 +195,6 @@ class ListSortModule:
 
     return sorted_list
 
-  def sort_by_price_ascending_by_key(self, json_string: str) -> dict:
-    """
-    @brief convert to a dictionaries from a string json_string, then sort dictionary by key
-    @param json_string: str
-    @return sorted_dict: dict
-    """
-    mydic = json.loads(json_string)
-    mysorted_list = sorted(mydic.items())
-    sorted_dict = dict(mysorted_list)
-
-    return sorted_dict
-
-  def sort_by_price_ascending_by_value(self, json_string: str) -> dict:
-      """
-      @brief convert to a dictionaries from a string json_string, then sort dictionary by value
-      @param json_string str
-      @return sorted_dict: dict
-      """
-      mydic = json.loads(json_string)
-      mysorted_list = sorted(mydic.items(), key=lambda x:x[1])
-      sorted_dict = dict(mysorted_list)
-
-      return sorted_dict
-
-  def sort_by_price_descending_by_key(self, json_string: str) -> dict:
-      """
-      @brief convert to a dictionaries from a string json_string, then sort dictionary by value
-      @param json_string: str
-      @return sorted_dict: dict
-      """
-      mydic = json.loads(json_string)
-      mysorted_list = sorted(mydic.items(), reverse=True)
-      sorted_dict = dict(mysorted_list)
-
-      return sorted_dict
-
-  def sort_by_price_descending_by_value(self, json_string: str) -> dict:
-      """
-      @brief convert to a dictionaries from a string json_string, then sort dictionary by value
-      @param json_string: str
-      @return sorted_dict: dict
-      """
-      mydic = json.loads(json_string)
-      mysorted_list = sorted(mydic.items(), key=lambda x:x[1], reverse=True)
-      sorted_dict = dict(mysorted_list)
-
-      return sorted_dict
 
 if __name__ == '__main__':
     print('module only, not main')
