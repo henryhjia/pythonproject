@@ -3,7 +3,7 @@
 @regularexpression
 """
 import re
-import common
+import common_module
 
 def email_validation():
   """
@@ -21,7 +21,7 @@ def email_validation():
   @validateemail
   @regularexpression
   """
-  common.print_function(email_validation)
+  common_module.print_function(email_validation)
   email_list = [
   '<alice-b@google.com>',
   '<Henry.jia_12@Gmail.com>',
@@ -53,7 +53,7 @@ def phone_number_validation():
   @phonevalidation
   @phonenumbervalidation
   """
-  common.print_function(phone_number_validation)
+  common_module.print_function(phone_number_validation)
 
   pattern = r'^[7-9]\d{9}$'
 
@@ -78,7 +78,7 @@ def phone_number_validation():
 def validate_names():
   """
   """
-  common.print_function(validate_names)
+  common_module.print_function(validate_names)
 
   pattern = r'\b[A-Z][a-z]*\b'
   text = 'Amy is 5 years old, and her sister Mary is 2 years old. Ruth and Peter, their parents, have 3 kids'
@@ -89,7 +89,7 @@ def validate_names():
 def validate_credit_card():
   """
   """
-  common.print_function(validate_credit_card)
+  common_module.print_function(validate_credit_card)
 
   pattern = r'^\d{4}-\d{4}-\d{4}-\d{4}$'
   text = '1234-5678-9012-3456'
@@ -98,7 +98,7 @@ def validate_credit_card():
   print(match)
 
 def reg_tester():
-  common.print_function(reg_tester)
+  common_module.print_function(reg_tester)
 
   text = "Amy works well, Amy gets good grades.  Our student Amy is good"
 

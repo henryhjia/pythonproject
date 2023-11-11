@@ -1,13 +1,12 @@
-#!/use/bin/python3
 """
 1. Read input_dict.json, input_list_of_dict.json, input_list_of_list.json
+   Take one file each run
 2. Populate self._input_dict, self._input_list_of_dict, self._unput_list_of_list
 3. Print
 4. Write to new json files
 
 """
 import json
-import os
 import sys
 
 from os.path import exists
@@ -17,10 +16,11 @@ class Person:
   @brief
   """
 
-  def __init__(self) -> None:
+  def __init__(self, filename: str) -> None:
     """
     @brief constructor
     """
+    self._filename = filename
 
     # following data are read from input_dict.json, input_list_of_dict.json, input_list_of_list.json    
     self._input_dict = {}
@@ -33,7 +33,7 @@ class Person:
     Populate self._input_dict
     """
     print('*********** read_json_dict()')  
-    self._input_dict = json.load(open('input_dict.json', 'r'))
+    self._input_dict = json.load(open(self._filename, 'r'))
 
   def read_json_list_of_dict(self) -> None:
     """
@@ -41,7 +41,7 @@ class Person:
     Populate self._input_list_of_dict
     """
     print('*********** read_json_list_of_dict()')     
-    self._input_list_of_dict = json.load(open('input_list_of_dict.json', 'r'))
+    self._input_list_of_dict = json.load(open(self._filename, 'r'))
 
   def read_json_list_of_list(self) -> None:
     """
@@ -49,7 +49,7 @@ class Person:
     Populate self._input_list_of_list
     """
     print('*********** read_json_list_of_list()')
-    self._input_list_of_list = json.load(open('input_list_of_list.json', 'r'))
+    self._input_list_of_list = json.load(open(self._filename, 'r'))
 
   def print_data(self) -> None:
     """
@@ -106,20 +106,35 @@ class Person:
       outfile.write(json_string)
     outfile.close()
   
-def main(args: list=None) -> int:
+def main(args: list=[]) -> None:
   """
   """
+  print(f'lengh of argument : {len(args)}')
+  if len(args) < 2:
+    print('usage:', args[0], '../data/input_dict.json')
+    exit(1)
 
-  me = Person()
+  config = args[1]
+
+  file_exist = exists(config)
+
+  if not file_exist:
+    print(f'{config} does not exist, exiting')
+    exit(1)
+
+  me = Person(config)
 
   # read json dict input_dict.json files
-  me.read_json_dict()
+  if 'input_dict.json' in config:
+    me.read_json_dict()
 
-  # read json list of dictionary file
-  me.read_json_list_of_dict()
+  elif 'input_list_of_dict' in config:
+    # read json list of dictionary file
+    me.read_json_list_of_dict()
 
-  # read json dictionary file
-  me.read_json_list_of_list()
+  elif 'input_list_of_list' in config:
+    # read json dictionary file
+    me.read_json_list_of_list()
 
   # print data _dict, _list_of_list, _list_of_dict (all read from test.txt)
   me.print_data()

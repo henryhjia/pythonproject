@@ -5,7 +5,7 @@ read csv file
 """
 import csv_reader_module
 
-def main() -> int:
+def main() -> None:
 
   me = csv_reader_module.CsvReader('../data/mpg.csv')
   me.read_csv()

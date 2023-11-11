@@ -8,7 +8,7 @@ import sys
 import json_reader_module
 
 
-def main(args: list=None) -> int:
+def main(args: list=[]) -> None:
   print(f'lengh of argument : {len(args)}')
   if len(args) < 2:
     print('usage:', args[0], '../data/dad_mom.json')

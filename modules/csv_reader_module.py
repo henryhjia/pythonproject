@@ -26,13 +26,13 @@ class CsvReader:
       print(i)
 
     print(mpg[0].keys())
-    print(len(mpg))
+    print("len of mpg=", len(mpg))
 
     ave_pulse = sum(float(d['cty']) for d in mpg) / len(mpg)
-    print(f'{ave_pulse:.2f}')
+    print(f'ave_city_mpg={ave_pulse:.2f}')
 
     cylinders = set(d['cyl'] for d in mpg)
-    print(cylinders)
+    print('cylinders=', cylinders)
 
     CtyMpgCyl = []
     for c in cylinders:
@@ -45,6 +45,7 @@ class CsvReader:
 
       CtyMpgCyl.append((c, summpg/cyltypecount))
 
+    print(CtyMpgCyl)
     CtyMpgCyl.sort(key=lambda x: x[0])
 
     for i in CtyMpgCyl:

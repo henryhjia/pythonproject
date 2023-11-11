@@ -1,10 +1,7 @@
-#!/use/bin/python3
 """
 1. Read family.txt file and populate _dict, _list_of_dict, _list_of_list
 2. Print these data structures
 """
-import json
-import os
 import sys
 
 from os.path import exists
@@ -136,7 +133,7 @@ class Family:
               format(value[3], '13.6')) 
 
 
-def main(args: list=None) -> int:
+def main(args: list=[]) -> None:
   """
   """
   print(f'lengh of argument : {len(args)}')
@@ -159,7 +156,6 @@ def main(args: list=None) -> int:
 
   # print data _dict, _list_of_list, _list_of_dict (all read from test.txt)
   me.print_data()
-
 
 
 if __name__ == '__main__':
