@@ -1,0 +1,12 @@
+docker images
+docker run hjtest
+
+# setup permission
+gcloud auth login
+gcloud config set project YOUR_PROJECT_ID
+gcloud services enable containerregistry.googleapis.com
+gcloud auth configure-docker
+
+# tag docker image and push to GCR
+docker tag hjtest gcr.io/ace-fiber-399601/hjtest
+docker push gcr.io/ace-fiber-399601/hjtest

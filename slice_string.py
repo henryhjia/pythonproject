@@ -5,12 +5,12 @@ string slicing
 """
 import string_slicing_module
 import logging
+import os
 
 def main() -> None:
   """
   """
-  logging.basicConfig(filename='slice_string.log', level=logging.DEBUG, filemode='w')
-  logger = logging.getLogger('my_logger')
+  logging.basicConfig(filename='slice_string.log', level=logging.INFO, filemode='w')
 
   me = string_slicing_module.StringSlicingModule()
 
@@ -18,18 +18,14 @@ def main() -> None:
   in_str = 'ABCCDCDCDCDC'
   pattern = 'CDC'
 
-  print('original string=', in_str)
-  print('pattern=', pattern)
-  logger.info(f'original string= {in_str}')
-  logger.info(f'pattern= {pattern}')
+  logging.info(f'original string= {in_str}')
+  logging.info(f'pattern= {pattern}')
 
   result = me.find_string_using_looping(in_str, pattern)
-  print(f'The total number of matching string is {result}')
-  logger.info(f'The total number of matching string is {result}')
+  logging.info(f'The total number of matching string is {result}')
 
   result = me.find_string_using_slicing(in_str, pattern)
-  print(f'The total number of matching string \'{pattern}\' is {result}')
-  logger.info(f'The total number of matching string \'{pattern}\' is {result}')
+  logging.info(f'The total number of matching string \'{pattern}\' is {result}')
   logging.shutdown()
 
 if __name__ == '__main__':
