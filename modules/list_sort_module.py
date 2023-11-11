@@ -2,6 +2,8 @@
 Sort list module
 @sortlist
 
+@brief  This module provides sort of list and sort of list of dictionaries methods
+
 Two methods for sorting a list:
 l2 = sorted(l1) - create a new list that is sorted
 l1.sort() - in place sort

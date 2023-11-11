@@ -5,9 +5,9 @@ Reverse list unittest
 usage: python3 -m unittest reverse_list_unittest.UnitTest -v
 
 reverse a list : three methods
-1. manual
-2. slicing
-3. list.reverse() method - in place reverse
+1. looping
+2. list.reverse() method - in place reverse
+3. slicing
 """
 import unittest
 import list_process_module

@@ -5,7 +5,7 @@
 
 Two methods:
 1. string slicing
-2. manual
+2. looping
 
 In Python, strings do not have a built-in reverse() method. Unlike lists, strings 
 are immutable, which means their contents cannot be modified after creation. 
