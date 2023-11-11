@@ -52,10 +52,10 @@ def main() -> None:
     {'name':'Bob', 'number':13}
   ]
   print(my_list_of_dict)
-  result = me.sort_list_of_dictionary_by_value(my_list_of_dict)
+  result = me.sort_list_of_dictionary_by_value(my_list_of_dict, 'number')
   print(result)
 
-  result = me.sort_list_of_dictionary_by_key(my_list_of_dict)
+  result = me.sort_list_of_dictionary_by_key(my_list_of_dict, 'name')
   print(result)
 
 if __name__ == '__main__':

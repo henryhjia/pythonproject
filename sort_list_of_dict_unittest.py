@@ -26,7 +26,7 @@ class UnitTest(unittest.TestCase):
     print('teardown')          
 
   def test_1_sort_list_of_dictionary_by_value(self) -> None:
-    result = self.me.sort_list_of_dictionary_by_value(self.my_list_of_dict)
+    result = self.me.sort_list_of_dictionary_by_value(self.my_list_of_dict, 'number')
     
     self.assertEqual(result[0]['number'], 1)
     self.assertEqual(result[1]['number'], 9)
@@ -34,7 +34,7 @@ class UnitTest(unittest.TestCase):
     self.assertEqual(result[3]['number'], 13)            
 
   def test_2_sort_list_of_dictionary_by_key(self) -> None:
-    result = self.me.sort_list_of_dictionary_by_key(self.my_list_of_dict)
+    result = self.me.sort_list_of_dictionary_by_key(self.my_list_of_dict, 'name')
 
     self.assertEqual(result[0]['name'], 'Bob')
     self.assertEqual(result[1]['name'], 'Jan')
@@ -70,37 +70,37 @@ class UnitTest(unittest.TestCase):
     self.assertEqual(result[3]['dad'][2], 72)
 
   def test_4_sort_by_price_ascending_by_price_ast_literal_eval(self) -> None:
-    result = self.me.sort_by_price_ascending_by_price_ast_literal_eval(self.test_str)
+    result = self.me.sort_by_price_ascending_by_price_ast_literal_eval(self.test_str, 'price')
     self.assertEqual(result[0]['price'], 1)
     self.assertEqual(result[1]['price'], 4.04)
     self.assertEqual(result[2]['price'], 9.99)
 
   def test_5_sort_by_price_ascending_by_price_json_loads(self) -> None:
-    result = self.me.sort_by_price_ascending_by_price_json_loads(self.test_str)
+    result = self.me.sort_by_price_ascending_by_price_json_loads(self.test_str, 'price')
     self.assertEqual(result[0]['price'], 1)
     self.assertEqual(result[1]['price'], 4.04)
     self.assertEqual(result[2]['price'], 9.99)    
 
   def test_6_sort_by_price_ascending_by_name_ast_literal_eval(self) -> None:
-    result = self.me.sort_by_price_ascending_by_name_ast_literal_eval(self.test_str)
+    result = self.me.sort_by_price_ascending_by_name_ast_literal_eval(self.test_str, 'name')
     self.assertEqual(result[0]['name'], 'coffee')
     self.assertEqual(result[1]['name'], 'eggs')
     self.assertEqual(result[2]['name'], 'rice')  
 
   def test_7_sort_by_price_ascending_by_name_json_loads(self) -> None:
-    result = self.me.sort_by_price_ascending_by_name_json_loads(self.test_str)
+    result = self.me.sort_by_price_ascending_by_name_json_loads(self.test_str, 'name')
     self.assertEqual(result[0]['name'], 'coffee')
     self.assertEqual(result[1]['name'], 'eggs')
     self.assertEqual(result[2]['name'], 'rice') 
 
   def test_8_sort_by_price_descending_by_name(self) -> None:
-    result = self.me.sort_by_price_descending_by_name(self.test_str)
+    result = self.me.sort_by_price_descending_by_name(self.test_str, 'name')
     self.assertEqual(result[0]['name'], 'rice')
     self.assertEqual(result[1]['name'], 'eggs')
     self.assertEqual(result[2]['name'], 'coffee') 
 
   def test_9_sort_by_price_descending_by_price(self) -> None:
-    result = self.me.sort_by_price_descending_by_price(self.test_str)
+    result = self.me.sort_by_price_descending_by_price(self.test_str, 'price')
     self.assertEqual(result[0]['price'], 9.99)
     self.assertEqual(result[1]['price'], 4.04)
     self.assertEqual(result[2]['price'], 1)  
