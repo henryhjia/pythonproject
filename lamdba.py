@@ -1,4 +1,3 @@
-#!/use/bin/python3
 """
 lambda test program
 """
@@ -39,7 +38,7 @@ class LambdaTester:
     new_list2 = [i**2 for i in numbers]
     print('new_list2=', new_list2)
 
-def main() -> int:
+def main() -> None:
 
   me = LambdaTester()
 

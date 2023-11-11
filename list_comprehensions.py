@@ -1,4 +1,3 @@
-#!/use/bin/python3
 """
 list comprehension test program
 """
@@ -28,7 +27,7 @@ class ListComprehensionsTester:
     new_list = [number for number in range(0,100) if number %2 ==0]
     print(new_list)
     
-def main() -> int:
+def main() -> None:
 
   me = ListComprehensionsTester()
 

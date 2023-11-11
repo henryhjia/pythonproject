@@ -1,4 +1,3 @@
-#!/use/bin/python3
 """
 map test program
 """
@@ -32,7 +31,7 @@ class MapTester:
     for i in cheap:
       print(i)
       
-def main() -> int:
+def main() -> None:
 
   me = MapTester()
 
