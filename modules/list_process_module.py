@@ -40,9 +40,9 @@ class ListProcessModule:
 
     return out_list
 
-  def list_moving_total_contains(self, in_list, total):
+  def list_moving_total_contains(self, in_list: list, total_connected_items: int, total:int):
     """
-    @brief calculate sum of 3 connected item, and check if the sum is the same as total
+    @brief calculate sum of total_connected_items, and check if the sum is the same as total
     @param in_list: list of integers
     @param total: (int) The total to check for.
     @return ret_value: bool, If moving total contains the total return True, otherwise False
@@ -53,8 +53,8 @@ class ListProcessModule:
     mysumlist = []
     mysum = 0
     for i in range(list_len):
-      if i+3 <= list_len:
-          sub_list = in_list[i:i+3]
+      if i+total_connected_items <= list_len:
+          sub_list = in_list[i:i+total_connected_items]
           mysum = sum(sub_list)
           mysumlist.append(mysum)
           mysum = 0

@@ -17,28 +17,28 @@ class UnitTest(unittest.TestCase):
     print('teardown')          
 
   def test_1_list_moving_total_contains(self) -> None:
-    result = self.me.list_moving_total_contains([1, 2, 3, 4], 6)    
+    result = self.me.list_moving_total_contains([1, 2, 3, 4], 3, 6)    
     self.assertTrue(result)      
 
-    result = self.me.list_moving_total_contains([1, 2, 3, 4], 9)
+    result = self.me.list_moving_total_contains([1, 2, 3, 4], 3, 9)
     self.assertTrue(result)     
 
-    result = self.me.list_moving_total_contains([1, 2, 3, 4], 12)    
+    result = self.me.list_moving_total_contains([1, 2, 3, 4], 3, 12)    
     self.assertFalse(result)         
 
-    result = self.me.list_moving_total_contains([1, 2, 3, 4], 7)    
+    result = self.me.list_moving_total_contains([1, 2, 3, 4], 3, 7)    
     self.assertFalse(result)         
 
-    result = self.me.list_moving_total_contains([1, 2, 3, 4, 5], 6) 
+    result = self.me.list_moving_total_contains([1, 2, 3, 4, 5], 3, 6) 
     self.assertTrue(result)         
 
-    result = self.me.list_moving_total_contains([1, 2, 3, 4, 5], 9)    
+    result = self.me.list_moving_total_contains([1, 2, 3, 4, 5], 3, 9)    
     self.assertTrue(result)         
 
-    result = self.me.list_moving_total_contains([1, 2, 3, 4, 5], 12)    
+    result = self.me.list_moving_total_contains([1, 2, 3, 4, 5], 3, 12)    
     self.assertTrue(result)         
 
-    result = self.me.list_moving_total_contains([1, 2, 3, 4, 5], 7)    
+    result = self.me.list_moving_total_contains([1, 2, 3, 4, 5], 3, 7)    
     self.assertFalse(result)   
 
 if __name__ == '__main__':
