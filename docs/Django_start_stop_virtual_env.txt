@@ -1,0 +1,8 @@
+Once created virtual env using pipenv
+To activate:
+1. Navigate to the directory where your Pipfile is located (the root of your Django project).
+2. pipenv shell
+3. python manage.py runserver
+
+To stop:
+1. exit
