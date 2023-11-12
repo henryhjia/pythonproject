@@ -8,5 +8,5 @@ gcloud services enable containerregistry.googleapis.com
 gcloud auth configure-docker
 
 # tag docker image and push to GCR
-docker tag hjtest gcr.io/ace-fiber-399601/hjtest
-docker push gcr.io/ace-fiber-399601/hjtest
+docker tag hjtest gcr.io/YOUR_PROJECT_ID/hjtest
+docker push gcr.io/YOUR_PROJECT_ID/hjtest
