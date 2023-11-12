@@ -44,7 +44,8 @@ This will generate a .tar.gz file in the dist/ directory.
 8. Upload your library to PyPI:
 
 $ sudo apt-get install twine
-$ twine upload dist/*
+$ twine upload dist/*  # all tar.gz
+$ twine upload dist/hjlibrary-2.0.tat.gz  # upload a perticular tar file
 
 
 9. Install: In your library's directory, run the following command to install it locally:
