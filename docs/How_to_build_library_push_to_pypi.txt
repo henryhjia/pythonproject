@@ -1,0 +1,55 @@
+1. Create a Project Directory: Choose a name for your library and create a directory for it. 
+$ mkdir mylibrary
+$ cd mylibrary
+
+2. Create a Python Package Structure: Inside your project directory, create a Python package structure. A basic structure includes a top-level directory with the same name as your library and an inner package directory. For example:
+
+$ mkdir mylibrary
+$ touch mylibrary/__init__.py
+
+The __init__.py file is used to mark the directory as a Python package.
+
+3. Add Modules: Create Python module files (.py) inside your package directory. These modules contain the code for your library. For example:
+
+$ touch mylibrary/module1.py and add contents
+$ touch mylibrary/module2.py and add contents
+You can include functions, classes, and other code in these modules.
+
+4. Create a README File: Create a README.md file to provide documentation for your library. You can use a text editor or the touch command to create the file:
+
+$ touch README.md
+Edit this file to include information about your library, how to use it, and any other relevant details.
+
+5. Create a setup.py File: Create a setup.py file to define the metadata for your library. Here's a basic example:
+
+from setuptools import setup
+
+setup(
+    name="mylibrary",
+    version="1.0.0",
+    description="Description of your library",
+    author="Your Name",
+    packages=["mylibrary"],
+)
+
+6. Install Required Tools: If you haven't already, you'll need to install the setuptools and wheel packages, which are used for packaging and distribution:
+
+$ sudo apt-get install python3-setuptools python3-wheel
+
+7. Package Your Library: Use the following command to create a source distribution of your library:
+
+$ python3 setup.py sdist
+This will generate a .tar.gz file in the dist/ directory.
+
+8. Upload your library to PyPI:
+
+$ sudo apt-get install twine
+$ twine upload dist/*
+
+
+9. Install: In your library's directory, run the following command to install it locally:
+
+$ pip install .
+
+In your python code, add
+from mylibrary.mymodule import my_class_name
