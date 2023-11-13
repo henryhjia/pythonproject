@@ -29,7 +29,7 @@ class CityTravelModule:
 
     return start_city
 
-  def construct_city_travel_list(self, start_city) -> list:
+  def construct_city_travel_list(self, start_city: str) -> list:
     """
     """
     list_len = len(self._inlist)
