@@ -19,7 +19,8 @@ def main(args: list) -> None:
 
   # Note: need to convert string form of a list to a list using ast
   in_list = ast.literal_eval(args[1])
-  print(in_list)
+  print('input list=', in_list)
+  print('target=', target)
   me = two_sum_module.TwoSumModule()
   result = me.find_two_sum_equal_to_target(in_list, target)
 
