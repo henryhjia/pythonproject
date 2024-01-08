@@ -41,7 +41,7 @@ class Practice:
     return output_list    
 
   
-def main() -> int:
+def main() -> None:
   """
   """
 
