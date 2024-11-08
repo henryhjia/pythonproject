@@ -107,7 +107,7 @@ def almost_increase_sequence(alist):
       del alist[i+1]
       break
     
-
+d=c
   for i in range(len(alist)-1):
     if alist[i+1] <= alist[i]:
       result1 = False
