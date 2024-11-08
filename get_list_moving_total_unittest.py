@@ -24,6 +24,7 @@ class UnitTest(unittest.TestCase):
     self.assertTrue(result)     
 
     result = self.me.list_moving_total_contains([1, 2, 3, 4], 3, 12)    
+    print('result=', result)
     self.assertFalse(result)         
 
     result = self.me.list_moving_total_contains([1, 2, 3, 4], 3, 7)    

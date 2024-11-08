@@ -25,7 +25,7 @@ class User:
     return self._name + ', ', + self._email
 
 def main():
-  users = [ User('david', 'd@gmail.com', 1), User('katie','k@gmail.com',2 )]
+  users = [ User('david', 'd@gmail.com', 3), User('katie','k@gmail.com',1 )]
   for user in users:
     user.do_something()
     print('Class variable=', User.class_var1)

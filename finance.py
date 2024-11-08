@@ -41,7 +41,7 @@ class FinanceTester:
             # .plot()
             )
     
-def main() -> int:
+def main() -> None:
 
   me = FinanceTester()
 

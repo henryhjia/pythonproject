@@ -7,7 +7,7 @@ import datetime as dt
 import time as tm
 
 
-class Datetime_Tester:
+class DatetimeModule:
   """
   """
 

@@ -38,6 +38,9 @@ class ProcessDictionaryModule:
 
     return new_list
   
-
+  def check_duplicate_values(self, in_dict) -> bool:
+    
+    return False
+  
 if __name__ == '__main__':
     print('module only, not main')

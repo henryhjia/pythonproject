@@ -5,9 +5,9 @@ date time tester
 """
 import datetime_module
 
-def main() -> int:
+def main() -> None:
 
-  me = datetime_module.Datetime_Tester()
+  me = datetime_module.DatetimeModule()
 
   me.test_datetime()
 
