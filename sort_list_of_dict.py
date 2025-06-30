@@ -36,12 +36,12 @@ def main() -> None:
   print(result)
 
   result = me.sort_list_of_complex_dictionary(my_list_of_dict, 1)
-  print('sot by list index 1')
+  print('sort by list index 1')
   print(my_list_of_dict)
   print(result)
 
   result = me.sort_list_of_complex_dictionary(my_list_of_dict, 2)
-  print('sot by list index 2')  
+  print('sort by list index 2')  
   print(my_list_of_dict)
   print(result)
 
