@@ -31,7 +31,7 @@ def main() -> None:
   ]
 
   result = me.sort_list_of_complex_dictionary(my_list_of_dict, 0)
-  print('sot by list index 0')
+  print('sort by list index 0')
   print(my_list_of_dict)
   print(result)
 
