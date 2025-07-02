@@ -17,7 +17,7 @@ ast: Abstract Sytax Trees
 """
 import json
 import ast
-import common_module
+from modules import common_module
 
 class ListSortModule:
   """

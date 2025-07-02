@@ -5,7 +5,7 @@ dictionary sort
 
 methods for sorting a dictionary
 """
-import common_module
+from modules import common_module
 import json
 
 class SortDictionaryModule:

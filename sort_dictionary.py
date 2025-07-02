@@ -4,7 +4,7 @@ Sort dictionary
 @sortdictionary
 
 """
-import dictionary_sort_module
+from modules import dictionary_sort_module
 
 def main() -> None:
 
