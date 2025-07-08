@@ -1,7 +1,7 @@
 #!/use/bin/python3
 """
 dictionary sort
-@sortdictionary
+@sort_dictionary
 
 methods for sorting a dictionary
 """
@@ -46,8 +46,8 @@ class SortDictionaryModule:
     @return sorted_dict: dict
     """
     mydic = json.loads(json_string)
-    mysorted_list = sorted(mydic.items())
-    sorted_dict = dict(mysorted_list)
+    my_sorted_list = sorted(mydic.items())
+    sorted_dict = dict(my_sorted_list)
 
     return sorted_dict
 
@@ -59,8 +59,8 @@ class SortDictionaryModule:
       @return sorted_dict: dict
       """
       mydic = json.loads(json_string)
-      mysorted_list = sorted(mydic.items(), key=lambda x:x[1])
-      sorted_dict = dict(mysorted_list)
+      my_sorted_list = sorted(mydic.items(), key=lambda x:x[1])
+      sorted_dict = dict(my_sorted_list)
 
       return sorted_dict
 
@@ -72,8 +72,8 @@ class SortDictionaryModule:
       @return sorted_dict: dict
       """
       mydic = json.loads(json_string)
-      mysorted_list = sorted(mydic.items(), reverse=True)
-      sorted_dict = dict(mysorted_list)
+      my_sorted_list = sorted(mydic.items(), reverse=True)
+      sorted_dict = dict(my_sorted_list)
 
       return sorted_dict
 
@@ -85,8 +85,8 @@ class SortDictionaryModule:
       @return sorted_dict: dict
       """
       mydic = json.loads(json_string)
-      mysorted_list = sorted(mydic.items(), key=lambda x:x[1], reverse=True)
-      sorted_dict = dict(mysorted_list)
+      my_sorted_list = sorted(mydic.items(), key=lambda x:x[1], reverse=True)
+      sorted_dict = dict(my_sorted_list)
 
       return sorted_dict
     

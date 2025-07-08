@@ -51,7 +51,7 @@ class JsonTester:
 
 
 def main(args: list=None) -> int:
-  print(f'lengh of argument : {len(args)}')
+  print(f'length of argument : {len(args)}')
   if len(args) < 2:
     print('usage:', args[0], 'dad_mom.json')
     exit(1)
@@ -70,6 +70,8 @@ def main(args: list=None) -> int:
 
   # sort list of dictionary based on value
   me.sort_data_from_json_file()
+
+  return 0
 
 if __name__ == '__main__':
   main(sys.argv)
