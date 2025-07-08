@@ -38,7 +38,8 @@ class SortDictionaryModule:
 
     return sorted_dict
 
-  def sort_by_price_ascending_by_key(self, json_string: str) -> dict:
+  @staticmethod
+  def sort_by_price_ascending_by_key(json_string: str) -> dict:
     """
     @brief convert to a dictionaries from a string json_string, then sort dictionary by key
     @param json_string: str
@@ -50,7 +51,8 @@ class SortDictionaryModule:
 
     return sorted_dict
 
-  def sort_by_price_ascending_by_value(self, json_string: str) -> dict:
+  @staticmethod
+  def sort_by_price_ascending_by_value(json_string: str) -> dict:
       """
       @brief convert to a dictionaries from a string json_string, then sort dictionary by value
       @param json_string str
@@ -62,7 +64,8 @@ class SortDictionaryModule:
 
       return sorted_dict
 
-  def sort_by_price_descending_by_key(self, json_string: str) -> dict:
+  @staticmethod
+  def sort_by_price_descending_by_key(json_string: str) -> dict:
       """
       @brief convert to a dictionaries from a string json_string, then sort dictionary by value
       @param json_string: str
@@ -74,7 +77,8 @@ class SortDictionaryModule:
 
       return sorted_dict
 
-  def sort_by_price_descending_by_value(self, json_string: str) -> dict:
+  @staticmethod
+  def sort_by_price_descending_by_value(json_string: str) -> dict:
       """
       @brief convert to a dictionaries from a string json_string, then sort dictionary by value
       @param json_string: str
