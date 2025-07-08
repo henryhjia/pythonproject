@@ -6,7 +6,7 @@ usage: python3 -m unittest sort_list_of_dict_unittest.UnitTest -v
 
 """
 import unittest
-import list_sort_module
+from modules import list_sort_module
 
 class UnitTest(unittest.TestCase):
   def setUp(self):

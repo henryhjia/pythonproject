@@ -3,7 +3,7 @@ Sort list of dictionary
 @sortlistofdictionary
 list and dictionary are populated in the program
 """
-import list_sort_module
+from modules import list_sort_module
 
 def main() -> None:
 

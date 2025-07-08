@@ -7,7 +7,7 @@ To sort the characters of the string 'google' in alphabetical order, you can use
 function to create a sorted list of characters and then join() them back into a string.
 """
 import sys
-import string_sort_module
+from modules import string_sort_module
 
 def main(args: list=None) -> None:
   print(f'lengh of argument : {len(args)}')

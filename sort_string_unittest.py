@@ -6,7 +6,7 @@ usage: python3 -m unittest sort_string_unittest.UnitTest -v
 
 """
 import unittest
-import string_sort_module
+from modules import string_sort_module
 
 class UnitTest(unittest.TestCase):
   def setUp(self):
