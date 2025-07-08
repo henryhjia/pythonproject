@@ -39,6 +39,7 @@ def main() -> None:
   print(f'{order: 3d}', dictionary_sort_module.SortDictionaryModule.sort_by_price_descending_by_key(str2))
   order += 1
 
+  # you can aso use instance to call a static method
   print(f'{order: 3d}', dictionary_sort_module.SortDictionaryModule.sort_by_price_descending_by_value(str2))
 if __name__ == '__main__':
   main()
