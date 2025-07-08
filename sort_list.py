@@ -1,7 +1,7 @@
 #!/use/bin/python3
 """
 Sort list
-@sortlist
+@sort_list
 
 Two methods:
 l2 = sorted(l1) - create a new list that is sorted

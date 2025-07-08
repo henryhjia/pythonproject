@@ -1,6 +1,6 @@
 """
 Sort list of dictionary
-@sortlistofdictionary
+@sort_list_of_dictionary
 list and dictionary are populated in the program
 """
 from modules import list_sort_module

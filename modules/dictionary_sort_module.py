@@ -1,7 +1,7 @@
 #!/use/bin/python3
 """
 dictionary sort
-@sortdictionary
+@sort_dictionary
 
 methods for sorting a dictionary
 """
@@ -38,51 +38,55 @@ class SortDictionaryModule:
 
     return sorted_dict
 
-  def sort_by_price_ascending_by_key(self, json_string: str) -> dict:
+  @staticmethod
+  def sort_by_price_ascending_by_key(json_string: str) -> dict:
     """
     @brief convert to a dictionaries from a string json_string, then sort dictionary by key
     @param json_string: str
     @return sorted_dict: dict
     """
     mydic = json.loads(json_string)
-    mysorted_list = sorted(mydic.items())
-    sorted_dict = dict(mysorted_list)
+    my_sorted_list = sorted(mydic.items())
+    sorted_dict = dict(my_sorted_list)
 
     return sorted_dict
 
-  def sort_by_price_ascending_by_value(self, json_string: str) -> dict:
+  @staticmethod
+  def sort_by_price_ascending_by_value(json_string: str) -> dict:
       """
       @brief convert to a dictionaries from a string json_string, then sort dictionary by value
       @param json_string str
       @return sorted_dict: dict
       """
       mydic = json.loads(json_string)
-      mysorted_list = sorted(mydic.items(), key=lambda x:x[1])
-      sorted_dict = dict(mysorted_list)
+      my_sorted_list = sorted(mydic.items(), key=lambda x:x[1])
+      sorted_dict = dict(my_sorted_list)
 
       return sorted_dict
 
-  def sort_by_price_descending_by_key(self, json_string: str) -> dict:
+  @staticmethod
+  def sort_by_price_descending_by_key(json_string: str) -> dict:
       """
       @brief convert to a dictionaries from a string json_string, then sort dictionary by value
       @param json_string: str
       @return sorted_dict: dict
       """
       mydic = json.loads(json_string)
-      mysorted_list = sorted(mydic.items(), reverse=True)
-      sorted_dict = dict(mysorted_list)
+      my_sorted_list = sorted(mydic.items(), reverse=True)
+      sorted_dict = dict(my_sorted_list)
 
       return sorted_dict
 
-  def sort_by_price_descending_by_value(self, json_string: str) -> dict:
+  @staticmethod
+  def sort_by_price_descending_by_value(json_string: str) -> dict:
       """
       @brief convert to a dictionaries from a string json_string, then sort dictionary by value
       @param json_string: str
       @return sorted_dict: dict
       """
       mydic = json.loads(json_string)
-      mysorted_list = sorted(mydic.items(), key=lambda x:x[1], reverse=True)
-      sorted_dict = dict(mysorted_list)
+      my_sorted_list = sorted(mydic.items(), key=lambda x:x[1], reverse=True)
+      sorted_dict = dict(my_sorted_list)
 
       return sorted_dict
     
