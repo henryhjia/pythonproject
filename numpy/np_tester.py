@@ -3,15 +3,14 @@
 # @elementwiseproduct
 # @matrixproduct
 import numpy as np
-import math
-from PIL import Image
 
 
 class NpTester:
   def __init__(self):
     pass
 
-  def test1(self):
+  @staticmethod
+  def test1():
     a = np.array([1,2,3])
 
     print(a)
@@ -41,7 +40,8 @@ class NpTester:
     b = np.arange(1,16,1).reshape(3,5)
     print(b)
 
-  def test2(self):
+  @staticmethod
+  def test2():
     """
     """
     mask = np.full((200,200),255)
