@@ -16,7 +16,7 @@ print('++++++++++++ 3-D array:')
 print(arr)
 print()
 
-print('++++++++++++ Check dimentions of array:')
+print('++++++++++++ Check dimension of array:')
 a = np.array(42)
 b = np.array([1, 2, 3, 4, 5])
 c = np.array([[1, 2, 3], [4, 5, 6]])
@@ -39,7 +39,7 @@ print(arr[0, 1, 2])
 
 
 arr = np.array([1, 2, 3, 4, 5, 6, 7])
-print('++++++++++++ 1-DSlicing [:4]:')
+print('++++++++++++ 1-D Slicing [:4]:')
 print(arr)
 print(arr[:4])
 
