@@ -1,8 +1,8 @@
 #!/use/bin/python3
-import pandas as pd
-import sys
-import matplotlib
 import matplotlib.pyplot as plt
+
+import pandas as pd
+
 
 def main():
   """
@@ -42,11 +42,11 @@ def main():
   print(df)  
   print(df.loc["day2"])
 
-  df = pd.read_csv('data.csv')
+  df = pd.read_csv('../../pythonreview/data.csv')
   print('+++++++++++++++ csv file:')
   print(df)
-  print(pd.options.display.max_rows) 
-  
+  print(pd.options.display.max_rows)
+
   df = pd.read_json('data.json')
   print('+++++++++++++++ Json File:')
   print(df.to_string())
@@ -97,21 +97,21 @@ def main():
 
   df = pd.DataFrame(data)
   print('+++++++++++++++ Dictionary as Json:')
-  print(df) 
+  print(df)
 
-  df = pd.read_csv('baddata.csv')
-  print('+++++++++++++++ Bad data:')  
-  print(df.to_string()) 
+  df = pd.read_csv('../../pythonreview/pandas/baddata.csv')
+  print('+++++++++++++++ Bad data:')
+  print(df.to_string())
 
   print('+++++++++++++++ Remove bad data:')
-  df_new = df.dropna()  
+  df_new = df.dropna()
   print(df_new.to_string())
 
   # df['Date'] = pd.to_datetime(df['Date'])
   # print(df.to_string())
 
   # df.loc[7, 'Duration'] = 45
-  print('+++++++++++++++ Remove duplicates:')  
+  print('+++++++++++++++ Remove duplicates:')
   df.drop_duplicates(inplace = True)
   print(df.to_string())
   # df.dropna(subset=['Date'], inplace = True)
@@ -119,20 +119,20 @@ def main():
   # x = df["Calories"].mean()
   # print('men=', x)
 
-  df = pd.read_csv('data_corr.csv')
-  print('+++++++++++++++ Corrolation:')    
+  df = pd.read_csv('../../pythonreview/pandas/data_corr.csv')
+  print('+++++++++++++++ Corrolation:')
   print(df.corr())
 
   df.plot()
   plt.show()
 
-  df = pd.read_csv('data_scatter.csv')
+  df = pd.read_csv('../../pythonreview/pandas/data_scatter.csv')
   df.plot(kind = 'scatter', x= 'Duration', y='Calories')
   plt.show()
 
   df["Duration"].plot(kind = 'hist')
   plt.show()
-  
+
 
 if __name__ == "__main__":
   main()    
