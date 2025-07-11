@@ -4,7 +4,7 @@ import sys
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
-import common_module
+from modules import common_module
 
 class PandaTester:
   def __init__(self):
