@@ -5,7 +5,7 @@ process list
 
 methods for processing a list
 """
-import common_module
+from modules import common_module
 
 class ListProcessModule:
   """
@@ -51,13 +51,13 @@ class ListProcessModule:
     
     list_len = len(in_list)
     mysumlist = []
-    mysum = 0
+
     for i in range(list_len):
       if i+total_connected_items <= list_len:
           sub_list = in_list[i:i+total_connected_items]
           mysum = sum(sub_list)
           mysumlist.append(mysum)
-          mysum = 0
+
 
     ret_value = False
     for item in mysumlist:

@@ -10,7 +10,7 @@ reverse a list : three methods
 3. slicing
 """
 import unittest
-import list_process_module
+from modules import list_process_module
 
 class UnitTest(unittest.TestCase):
   def setUp(self):

@@ -9,7 +9,7 @@ usage: python3 -m unittest reverse_string_unittest.UnitTest -v
 
 """
 import unittest
-import string_reverse_module
+from modules import string_reverse_module
 
 class UnitTest(unittest.TestCase):
   def setUp(self):

@@ -14,7 +14,7 @@ order of characters in-place.
 
 If you want to reverse a string, you can achieve it using slicing
 """
-import string_reverse_module
+from modules import string_reverse_module
 import sys
 
 def main(args: list=None) -> None:

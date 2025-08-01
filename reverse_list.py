@@ -9,7 +9,7 @@ reverse a list : three methods
 3. slicing
 """
 
-import list_process_module
+from modules import list_process_module
 
 def main() -> None:
   """
