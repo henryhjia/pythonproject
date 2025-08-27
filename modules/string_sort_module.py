@@ -7,9 +7,9 @@ Two string sorting methods are provided here:
 
 1. To sort the characters of the string 'google' in alphabetical order, you can use the sorted() 
    function to create a sorted list of characters and then join() them back into a string.
-2. A specific sorting for a mix string of alphabet and digit with specfific criteria:
+2. A specific sorting for a mix string of alphabet and digit with specific criteria:
    a. lower case letter before upper case letter
-   b. alphebet before digit
+   b. alphabet before digit
    c. odd digit before even digit
 
 """
@@ -32,9 +32,9 @@ class StringSortModule:
     return sorted_string
 
   def sort_alpha_digit(self, input_string: str) -> str:
-    # @brief sort both alphabet and digit string with these criterias:
+    # @brief sort both alphabet and digit string with these criteria:
     #        1. lower case letter before upper case letter
-    #        2. alphebet before digit
+    #        2. alphabet before digit
     #        3. odd digit before even digit
     #        an example: Sorted1234
     #        result: deortS1324

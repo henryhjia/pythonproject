@@ -10,7 +10,7 @@ import sys
 from modules import string_sort_module
 
 def main(args: list=None) -> None:
-  print(f'lengh of argument : {len(args)}')
+  print(f'length of argument : {len(args)}')
   if len(args) < 2:
     print('usage:', args[0], 'google')
     exit(1)
@@ -22,9 +22,10 @@ def main(args: list=None) -> None:
   print('original string=', args[1])
   print('sorted string=', result)
 
-  # sort both alphabet and digit string with these criterias:
+  # sort both alphabet and digit string with these criteria:
+  # usage: python3 sort_string Sorted1234
   # 1. lower case letter before upper case letter
-  # 2. alphebet before digit
+  # 2. alphabet before digit
   # 3. odd digit before even digit
   # an example: Sorted1234
   # result: deortS1324
