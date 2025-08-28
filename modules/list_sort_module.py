@@ -48,6 +48,16 @@ class ListSortModule:
     l1.sort()
 
     return l1
+
+  def sort_in_place_sort_v2(self, l1: list, b: int) -> None:
+    """
+    @brief use Python build-in in-place sort()
+    @param l1: input list
+    @return None
+    """
+    common_module.print_function(self.sort_in_place_sort)
+    l1.sort()
+    b=20
   
   def sort_integer_unique_mixed_data_type_in_list(self, mylist: list) -> list:
     """
