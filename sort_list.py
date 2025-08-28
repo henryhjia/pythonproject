@@ -58,5 +58,12 @@ def main() -> None:
   result = me.sort_list_of_dictionary_by_key(my_list_of_dict, 'name')
   print(result)
 
+  print('sort_in_place_v2:')
+  l1=[3,2,4,6,1]
+  a=10
+  me.sort_in_place_sort_v2(l1,10)
+  print(l1)
+  print(a)
+
 if __name__ == '__main__':
   main()
