@@ -6,7 +6,7 @@ usage: python3 -m unittest slice_string_unittest.UnitTest -v
 
 """
 import unittest
-import string_slicing_module
+from modules import string_slicing_module
 
 class UnitTest(unittest.TestCase):
   def setUp(self):
