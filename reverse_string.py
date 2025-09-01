@@ -18,7 +18,7 @@ from modules import string_reverse_module
 import sys
 
 def main(args: list=None) -> None:
-  print(f'lengh of argument : {len(args)}')
+  print(f'length of argument : {len(args)}')
   if len(args) < 2:
     print('usage:', args[0], 'google')
     exit(1)
