@@ -3,7 +3,7 @@
 @regularexpression
 """
 import re
-import common_module
+from modules import common_module
 
 def email_validation():
   """
