@@ -22,12 +22,17 @@ class User:
     print('Instance variable from ' + self._name + ' is: ' + str(self._count))
 
   def __str__(self):
-    return self._name + ', ', + self._email
+    return f"{self._name} + ', ', + {self._email}"
 
 def main():
   users = [ User('david', 'd@gmail.com', 3), User('katie','k@gmail.com',1 )]
   for user in users:
     user.do_something()
-    print('Class variable=', User.class_var1)
+    print('Class variable=', User.class_var1, user.class_var1)
+    User.class_var1 = 10
+    print(user)
+
+  for user in users:
+    print('Class variable=', User.class_var1, user.class_var1)
 
 main()
