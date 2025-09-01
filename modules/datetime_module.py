@@ -17,7 +17,8 @@ class DatetimeModule:
 
     pass
 
-  def test_datetime(self):
+  @staticmethod
+  def test_datetime():
       
     mydt = dt.datetime(2023,9,9,14,9,56,938518)
     print('my date from string=', mydt)
