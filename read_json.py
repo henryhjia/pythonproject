@@ -5,11 +5,11 @@ read json file
 """
 import sys
 
-import json_reader_module
+from modules import json_reader_module
 
 
-def main(args: list=[]) -> None:
-  print(f'lengh of argument : {len(args)}')
+def main(args: list = []) -> None:
+  print(f'length of argument : {len(args)}')
   if len(args) < 2:
     print('usage:', args[0], '../data/dad_mom.json')
     exit(1)
