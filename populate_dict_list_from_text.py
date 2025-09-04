@@ -133,12 +133,14 @@ class Family:
               format(value[3], '13.6')) 
 
 
-def main(args: list=[]) -> None:
+def main(args=None) -> None:
   """
   """
-  print(f'lengh of argument : {len(args)}')
+  if args is None:
+    args = []
+  print(f'length of argument : {len(args)}')
   if len(args) < 2:
-    print('usage:', args[0], 'family.txt')
+    print('usage:', args[0], '../data/family.txt')
     exit(1)
 
   config = args[1]

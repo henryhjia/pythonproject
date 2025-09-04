@@ -32,7 +32,7 @@ class Person:
     Read input_dict.json
     Populate self._input_dict
     """
-    print('*********** read_json_dict()')  
+    print('*********** read_json_dict()')
     self._input_dict = json.load(open(self._filename, 'r'))
 
   def read_json_list_of_dict(self) -> None:
@@ -40,7 +40,7 @@ class Person:
     Read input_list_of_dict.json
     Populate self._input_list_of_dict
     """
-    print('*********** read_json_list_of_dict()')     
+    print('*********** read_json_list_of_dict()')
     self._input_list_of_dict = json.load(open(self._filename, 'r'))
 
   def read_json_list_of_list(self) -> None:
@@ -58,35 +58,35 @@ class Person:
     self._input_list_of_list
     self._input_list_of_dict
     """
-    print('*********** print_data()')    
+    print('*********** print_data()')
 
     print('+++++ formated self._input_dict read from input_dict.json file:')
     for key, value in self._input_dict.items():
-      print('key=', 
-            format(key, '10s'), 
+      print('key=',
+            format(key, '10s'),
             'value=',
-            format(value[0], '10s'), 
+            format(value[0], '10s'),
             format(value[1], '3d'),
             format(value[2], '8.3f'),
-            format(value[3], '13.6'))    
+            format(value[3], '13.6'))
 
     print(f'\n+++++ formated self._input_list_of_list read from input_list_of_list.json file:')
     for i in self._input_list_of_list:
-      print(format(i[0],'10s'), 
-            format(i[1], '3d'), 
+      print(format(i[0],'10s'),
+            format(i[1], '3d'),
             format(i[2], '8.3f'),
             format(i[3], '13.6f'))
 
     print(f'\n+++++ formated self._input_list_of_dict read from input_list_dict.json file:')
     for i in self._input_list_of_dict:
       for key, value in i.items():
-        print('key=', 
+        print('key=',
               format(key, '10s'),
               'value=',
-              format(value[0], '10s'), 
+              format(value[0], '10s'),
               format(value[1], '3d'),
-              format(value[2], '8.3f'),                            
-              format(value[3], '13.6')) 
+              format(value[2], '8.3f'),
+              format(value[3], '13.6'))
 
   def write_json(self) -> None:
     """
@@ -105,11 +105,13 @@ class Person:
     with open('output_list_of_dict.json', 'w') as outfile:
       outfile.write(json_string)
     outfile.close()
-  
-def main(args: list=[]) -> None:
+
+def main(args=None) -> None:
   """
   """
-  print(f'lengh of argument : {len(args)}')
+  if args is None:
+    args = []
+  print(f'length of argument : {len(args)}')
   if len(args) < 2:
     print('usage:', args[0], '../data/input_dict.json')
     exit(1)
