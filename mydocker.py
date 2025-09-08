@@ -2,9 +2,10 @@
 string slicing
 @stringslicing
 """
-import string_slicing_module
 import logging
-import os
+
+from modules import string_slicing_module
+
 
 def main() -> None:
   """
