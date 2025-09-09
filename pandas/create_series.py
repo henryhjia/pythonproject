@@ -35,7 +35,7 @@ class PandaTester:
                       'Jack': 'Chemistry',
                       'Molly': 'English'}
     s = pd.Series(students_cores)
-    print('+++++++++ create Series using list of dictionary')
+    print('+++++++++ create Series using a dictionary')
     print(s)
     print('s index=', s.index)
 
