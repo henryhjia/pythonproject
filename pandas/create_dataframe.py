@@ -1,5 +1,6 @@
 #!/use/bin/python3
 import pandas as pd
+import matplotlib.pyplot as plt
 
 from modules import common_module
 
@@ -11,7 +12,7 @@ class PandaTester:
   def create_dataframe(self):
     common_module.print_function(self.create_dataframe)
 
-    # create a dataframe from a dictionary - the value has to be list,array, series
+    # create a dataframe from a dictionary - the value has to be a list,array, series
     mydict = {
       "henry":[10,20,30],
       "david":["a", "b", "c"]
@@ -19,6 +20,16 @@ class PandaTester:
     mydf = pd.DataFrame(mydict)
     print('dataframe from a dictionary:')
     print(mydf)
+    print()
+
+    mydict = {
+      "A": range(20),
+      "B": range(20,40)
+    }
+    mydf = pd.DataFrame(mydict)
+    print('dataframe from a dictionary 2:')
+    print(mydf)
+    print()
 
     # create a dataframe with list of series
     series1 = pd.Series({'Name': 'Alice', 'Class': 'Physics', 'Score': 85})
@@ -71,7 +82,42 @@ class PandaTester:
     print(mydf.info())
     print()
 
+    # process missing data in dataframe from csv (data_missing_data.csv) file
+    mydf = pd.read_csv('../../data/data_missing_data.csv', skipinitialspace=True)
+    print('missing dataframe from data_missing_data.csv')
+    print(mydf)
+    new_df = mydf.dropna()
+    print()
+    print('drop na:')
+    print(new_df.to_string())
+    print()
+
+    print('fill empty with 1300:')
+    new_df = mydf.fillna(1300)
+    print(new_df.to_string())
+    print()
+    print('mean() value of column Calories:')
+    print(mydf["Calories"].mean())
+    print()
+
+    print('plotting:')
+    mydf = pd.read_csv('../../data/data.csv')
+    mydf.plot()
+    plt.show()
+    print()
+
+    mydf.plot(kind='scatter', x='Duration', y='Calories')
+    plt.show()
+
+    mydf['Duration'].plot(kind='hist')
+    plt.show()
+
+    print('head():')
+    print(mydf.head())
+    print()
+
     print('column names')
+    print(mydf.columns)
     print(df.columns)
     print()
     
