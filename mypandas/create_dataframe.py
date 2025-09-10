@@ -1,9 +1,12 @@
-#!/use/bin/python3
+from pathlib import Path
 import pandas as pd
 import matplotlib.pyplot as plt
-
 from modules import common_module
 
+BASE_DIR = Path(__file__).resolve().parents[1]
+DATA_PATH1  = BASE_DIR / "data" / "data.csv"
+DATA_PATH2  = BASE_DIR / "data" / "data.json"
+DATA_PATH3  = BASE_DIR / "data" / "data_missing_data.csv"
 
 class PandaTester:
   def __init__(self):
@@ -66,7 +69,7 @@ class PandaTester:
     print()
 
     # create dataframe from csv (data.csv) file
-    mydf = pd.read_csv('../../data/data.csv')
+    mydf = pd.read_csv(DATA_PATH1)
     print('whole dataframe from data.csv')
     print(mydf.to_string())
 
@@ -75,7 +78,7 @@ class PandaTester:
     print()
 
     # create dataframe from json (data.json) file
-    mydf = pd.read_json('../../data/data.json')
+    mydf = pd.read_json(DATA_PATH2)
     print('partial dataframe from data.json')
     print(mydf)
     print('mydf.info():')
@@ -83,7 +86,7 @@ class PandaTester:
     print()
 
     # process missing data in dataframe from csv (data_missing_data.csv) file
-    mydf = pd.read_csv('../../data/data_missing_data.csv', skipinitialspace=True)
+    mydf = pd.read_csv(DATA_PATH3, skipinitialspace=True)
     print('missing dataframe from data_missing_data.csv')
     print(mydf)
     new_df = mydf.dropna()
@@ -101,7 +104,7 @@ class PandaTester:
     print()
 
     print('plotting:')
-    mydf = pd.read_csv('../../data/data.csv')
+    mydf = pd.read_csv(DATA_PATH1)
     mydf.plot()
     plt.show()
     print()
@@ -120,7 +123,9 @@ class PandaTester:
     print(mydf.columns)
     print(df.columns)
     print()
-    
+
+    print('df:')
+    print(df)
     print('school1-----')
     d = df.loc['school1']
     print('d.loc[\'school1\']')
