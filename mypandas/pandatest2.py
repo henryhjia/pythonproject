@@ -1,8 +1,5 @@
-#!/use/bin/python3
 import pandas as pd
-import sys
-import matplotlib
-import matplotlib.pyplot as plt
+
 
 def main():
   """
