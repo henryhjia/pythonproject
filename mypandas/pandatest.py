@@ -1,8 +1,14 @@
-#!/use/bin/python3
+from pathlib import Path
 import matplotlib.pyplot as plt
 
 import pandas as pd
 
+BASE_DIR = Path(__file__).resolve().parents[1]
+DATA_PATH_CSV  = BASE_DIR / 'data' / 'data.csv'
+DATA_PATH_JSON  = BASE_DIR / "data" / "data.json"
+DATA_PATH_BADDATA  = BASE_DIR / 'data' / 'data_missing_data.csv'
+DATA_PATH_CSV1  = BASE_DIR / 'data' / 'data_corr.csv'
+DATA_PATH_CSV2  = BASE_DIR / 'data' / 'data_scatter.csv'
 
 def main():
   """
@@ -42,12 +48,12 @@ def main():
   print(df)  
   print(df.loc["day2"])
 
-  df = pd.read_csv('../../pythonreview/data.csv')
+  df = pd.read_csv(DATA_PATH_CSV)
   print('+++++++++++++++ csv file:')
   print(df)
   print(pd.options.display.max_rows)
 
-  df = pd.read_json('data.json')
+  df = pd.read_json(DATA_PATH_JSON)
   print('+++++++++++++++ Json File:')
   print(df.to_string())
 
@@ -99,7 +105,7 @@ def main():
   print('+++++++++++++++ Dictionary as Json:')
   print(df)
 
-  df = pd.read_csv('../../pythonreview/pandas/baddata.csv')
+  df = pd.read_csv(DATA_PATH_BADDATA)
   print('+++++++++++++++ Bad data:')
   print(df.to_string())
 
@@ -119,14 +125,14 @@ def main():
   # x = df["Calories"].mean()
   # print('men=', x)
 
-  df = pd.read_csv('../../pythonreview/pandas/data_corr.csv')
-  print('+++++++++++++++ Corrolation:')
+  df = pd.read_csv(DATA_PATH_CSV1)
+  print('+++++++++++++++ Correlation:')
   print(df.corr())
 
   df.plot()
   plt.show()
 
-  df = pd.read_csv('../../pythonreview/pandas/data_scatter.csv')
+  df = pd.read_csv(DATA_PATH_CSV2)
   df.plot(kind = 'scatter', x= 'Duration', y='Calories')
   plt.show()
 

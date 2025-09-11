@@ -1,10 +1,15 @@
+# if run in terminal:
+# in pythonproject/
+# python3 -m mypandas.create_dataframe
+
 from pathlib import Path
 import pandas as pd
 import matplotlib.pyplot as plt
 from modules import common_module
+import os
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-DATA_PATH1  = BASE_DIR / "data" / "data.csv"
+DATA_PATH1  = BASE_DIR / 'data' / 'data.csv'
 DATA_PATH2  = BASE_DIR / "data" / "data.json"
 DATA_PATH3  = BASE_DIR / "data" / "data_missing_data.csv"
 
@@ -170,6 +175,9 @@ class PandaTester:
 def main():
   """
   """
+  print('CWD:', os.getcwd())
+  print('__file__:', __file__)
+
   me = PandaTester()
   me.create_dataframe()
 
