@@ -5,13 +5,13 @@
 @multilevelindex
 use census.csv
 """
-import pandas as pd
 import sys
-import matplotlib
-import matplotlib.pyplot as plt
-import numpy as np
-import common_module
-from os.path import exists
+from pathlib import Path
+import pandas as pd
+from modules import common_module
+
+BASE_DIR = Path(__file__).resolve().parents[1]
+DATA_PATH  = BASE_DIR / 'data' / 'census.csv'
 
 class PandaTester:
   def __init__(self, filename: str):
@@ -19,8 +19,8 @@ class PandaTester:
 
   def read_csv(self):
     common_module.print_function(self.read_csv)
- 
-    print('++++++++++ data frame df with index column being the serial no')       
+
+    print('++++++++++ data frame df with index column being the serial no')
     df = pd.read_csv(self._filename, index_col = 0)
     print(df.head())
 
@@ -31,7 +31,7 @@ class PandaTester:
     print(df.head())
 
     # reset index
-    print('++++++++++ reset index')    
+    print('++++++++++ reset index')
     df = df.reset_index()
     print(df.head())
 
@@ -39,38 +39,39 @@ class PandaTester:
     df = pd.read_csv(self._filename)
     print(df.head())
 
-    print('++++++++++ SUMLEV unique')  
+    print('++++++++++ SUMLEV unique')
     print(df['SUMLEV'].unique())
-    print('++++++++++ REGION unique')  
+    print('++++++++++ REGION unique')
     print(df['REGION'].unique())
 
     print('++++++++++ df=df[df[\'SUMLEV\'] == 50')
     df = df[df['SUMLEV'] == 50]
     print(df.head())
 
-    columns_to_keep = ['STNAME','CTYNAME','BIRTHS2010', 'BIRTHS2011', 'BIRTHS2012', 'BIRTHS2013', 
+    columns_to_keep = ['STNAME','CTYNAME','BIRTHS2010', 'BIRTHS2011', 'BIRTHS2012', 'BIRTHS2013',
                        'BIRTHS2014', 'BIRTHS2015', 'POPESTIMATE2010', 'POPESTIMATE2011', 'POPESTIMATE2011',
                        'POPESTIMATE2012', 'POPESTIMATE2013', 'POPESTIMATE2014', 'POPESTIMATE2015']
 
     print('++++++++++ keep certain columns')
     df = df[columns_to_keep]
     print(df.head())
-    
-    print('++++++++++ set_index[STNAME, CTYNAME]')    
+
+    print('++++++++++ set_index[STNAME, CTYNAME]')
     df = df.set_index(['STNAME','CTYNAME'])
     print(df.head())
 
-    print('++++++++++ result from Michigan state and Washtenaw county as due index') 
+    print('++++++++++ result from Michigan state and Washtenaw county as due index')
     print(df.loc['Michigan','Washtenaw County'])
 
-    print('++++++++++ result from Michigan state') 
+    print('++++++++++ result from Michigan state')
     print(df.loc['Michigan'])
 
-def main(args: list=None) -> int:
-  print(f'lengh of argument : {len(args)}')
+def main(args: list=None) -> None:
+  print(f'length of argument : {len(args)}')
   if len(args) < 2:
     print('usage:', args[0], 'some.csv')
-    exit(1)
+    args.append(DATA_PATH)
+    print(args)
 
   try:
     me = PandaTester(args[1])
@@ -81,4 +82,4 @@ def main(args: list=None) -> int:
     print(e)
 
 if __name__ == '__main__':
-  main(sys.argv)  
+  main(sys.argv)
