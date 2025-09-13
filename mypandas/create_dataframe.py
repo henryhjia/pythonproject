@@ -37,12 +37,41 @@ class PandaTester:
 
     # create a dataframe from a dictionary - the value has to be a list,array, series
     mydict = {
-      "henry":[10,20,30],
-      "david":["a", "b", "c"]
+      "henry":[10,20,30,40,50,60],
+      "david":["a", "b", "c",'d','e','f']
     }
     mydf = pd.DataFrame(mydict)
     print('dataframe from a dictionary:')
     print(mydf)
+
+    print('df index:')
+    print(mydf.index)
+    print()
+
+    print('dataframe with filter:')
+    filter_df = mydf[mydf['henry'] > 30]
+    print(filter_df)
+    print()
+
+    print('access row 0')
+    print(mydf.loc[0])
+    print()
+
+    mydf_with_index = mydf.set_index("henry")
+    print('index changed to henry')
+    print(mydf_with_index)
+    print()
+    print('locate df with new index at label 10: loc[10]')
+    print(mydf_with_index.loc[10])
+    print()
+
+    print('locate df with new index at position 1: loc[1]')
+    print(mydf_with_index.iloc[1])
+    print()
+
+
+    print('access column henry')
+    print(mydf['henry'])
     print()
 
     mydict = {
@@ -98,7 +127,7 @@ class PandaTester:
     # create dataframe from csv (data.csv) file
     mydf = pd.read_csv(DATA_PATH1)
     print('whole dataframe from data.csv')
-    print(mydf.to_string())
+    # print(mydf.to_string())
 
     print('beginning 5 rows and last 5 rows dataframe from data.csv')
     print(mydf)
