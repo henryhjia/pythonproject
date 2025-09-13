@@ -23,12 +23,20 @@ class PandaTester:
     print('++++++++++ data frame df with index column being the serial no')
     df = pd.read_csv(self._filename, index_col = 0)
     print(df.head())
+    print('index=',df.index)
+
+    # the following are equivalent with above statement
+    # df = pd.read_csv(self._filename)
+    # df_index = df.set_index('SUMLEV')
+    # print(df_index.head())
+    # print(df_index.index)
+    # print()
 
     # copy indexed data into its own column
     print('++++++++++ copy serial no, then set chance of admit as index')
     df['Serial Number'] = df.index
-    df = df.set_index('Chance of Admit ')
-    print(df.head())
+    new_df = df.set_index('Chance of Admit ')
+    print(new_df.head())
 
     # reset index
     print('++++++++++ reset index')
@@ -38,6 +46,7 @@ class PandaTester:
   def read_census_csv(self):
     df = pd.read_csv(self._filename)
     print(df.head())
+    print(df.index)
 
     print('++++++++++ SUMLEV unique')
     print(df['SUMLEV'].unique())
