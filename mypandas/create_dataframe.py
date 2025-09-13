@@ -4,6 +4,7 @@
 
 from pathlib import Path
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 from modules import common_module
 import os
@@ -19,6 +20,20 @@ class PandaTester:
 
   def create_dataframe(self):
     common_module.print_function(self.create_dataframe)
+
+    # create a dataframe from a list
+    mylist = [10,20,30,40,50]
+    mydf = pd.DataFrame(mylist)
+    print('dataframe from a list:')
+    print(mydf)
+    print()
+
+    # create a dataframe from a numpy array
+    mydata = np.array([[1,2,3],[4,5,6],[7,8,9]])
+    mydf = pd.DataFrame(mydata)
+    print('dataframe from a numpy array:')
+    print(mydf)
+    print()
 
     # create a dataframe from a dictionary - the value has to be a list,array, series
     mydict = {
@@ -51,6 +66,13 @@ class PandaTester:
     df = pd.DataFrame([series1, series2, series3], index=['school1', 'school2', 'school1'])
     print('dataframe from list of series-----')
     print(df)
+    print()
+
+    # create a dataframe from a list of list
+    mydata = [['tom',10],['nick',15], ['juli', 14]]
+    mydf = pd.DataFrame(mydata)
+    print('dataframe from list of list:')
+    print(mydf)
     print()
 
     # create a dataframe with list of dictionaries
