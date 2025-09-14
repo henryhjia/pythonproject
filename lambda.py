@@ -1,7 +1,7 @@
 """
 lambda test program
 """
-import common_module
+from modules import common_module
 
 class LambdaTester:
   """
