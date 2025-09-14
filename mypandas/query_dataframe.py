@@ -1,7 +1,9 @@
 """
 @booleanmask
 @mask
-use Admission_Predict.csv
+use pythonproject/data/Admission_Predict.csv
+Command usage: in pythonproject/
+python3 -m mypandas.query_dataframe
 """
 import sys
 from pathlib import Path
@@ -10,7 +12,7 @@ import pandas as pd
 from modules import common_module
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-DATA_PATH  = BASE_DIR / 'data' / 'data.csv'
+DATA_PATH  = BASE_DIR / 'data' / 'Admission_Predict.csv'
 
 class PandaTester:
   def __init__(self, filename: str):
@@ -28,7 +30,7 @@ class PandaTester:
 
     print('++++++++++ chance of admit column > 0.7')
     admit_mask = df['chance of admit'] > 0.7
-    print(admit_mask)
+    print('mask=',admit_mask)
 
     print('++++++++++ isnull() mask')
     null_mask = df.isnull()
@@ -54,11 +56,12 @@ class PandaTester:
     result = df.query('(`gre score` > 320) & (`toefl score` > 110)')
     print(result)
 
-def main(args: list=None) -> int:
+def main(args: list=None) -> None:
   print(f'length of argument : {len(args)}')
   if len(args) < 2:
     print('usage:', args[0], 'some.csv')
-    exit(1)
+    args.append(DATA_PATH)
+    print(args)
 
   try:
     me = PandaTester(args[1])

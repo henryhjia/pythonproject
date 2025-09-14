@@ -3,12 +3,9 @@
 use presidents.csv
 """
 import pandas as pd
-import sys
-import matplotlib
-import matplotlib.pyplot as plt
-import numpy as np
-import common_module
-from os.path import exists
+
+from modules import common_module
+
 
 class PandaTester:
   def __init__(self):
@@ -29,18 +26,22 @@ class PandaTester:
     print('+++++++++++ staff:')
     self._staff = self._staff.set_index('Name')
     print(self._staff)
+    print()
 
     print('+++++++++++ student:')    
     self._student = self._student.set_index('Name')
     print(self._student)
+    print()
 
     merged = pd.merge(self._staff, self._student, how='outer', left_index=True, right_index=True)
     print('+++++++++++ outer join:')  
     print(merged)
+    print()
 
     merged = pd.merge(self._staff, self._student, how='inner', left_index=True, right_index=True)
     print('+++++++++++ inner join:')      
     print(merged)
+    print()
 
     self._staff = self._staff.reset_index()
     self._student = self._student.reset_index()
@@ -51,7 +52,7 @@ class PandaTester:
     print(merged)
 
 
-def main() -> int:
+def main() -> None:
   me = PandaTester()
   me.merge_dataframe()
 

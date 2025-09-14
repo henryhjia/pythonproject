@@ -1,6 +1,15 @@
-# if run in terminal:
-# in pythonproject/
-# python3 -m mypandas.create_dataframe
+"""
+Project directory structure:
+Projects
+   |
+   ---> mypandas
+   |
+   ---> data
+
+if run in terminal:
+Command usage: in pythonproject/
+python3 -m mypandas.create_dataframe
+"""
 
 from pathlib import Path
 import pandas as pd
@@ -92,9 +101,28 @@ class PandaTester:
     print('series2-----\n', series2)
     print('series3-----\n', series3)
 
-    df = pd.DataFrame([series1, series2, series3], index=['school1', 'school2', 'school1'])
+    df = pd.DataFrame([series1, series2, series3], index=['school1', 'school2', 'school3'])
     print('dataframe from list of series-----')
     print(df)
+    print()
+
+    print('print multiple columns')
+    print(df[['Name','Class']])
+    print()
+    print('print with loc: row school1:school2, and column [Name,Class]:')
+    print(df.loc['school1':'school2',['Name','Class']])
+    print()
+    print('print with loc: row [school1, school2], and column Name:Class:')
+    print(df.loc[['school1','school2'],'Name':'Class'])
+    print()
+    print('print with iloc: row 0:1 exclusive and column [0,1]: column inclusive because it is a list')
+    print(df.iloc[0:1, [0,1]])
+    print()
+    print('print with iloc: row 0:1 exclusive and column 0-1: column exclusive')
+    print(df.iloc[0:1, 0:1])
+    print()
+    print('print with iloc: row [0,1] inclusive and column 0-1: column exclusive')
+    print(df.iloc[[0,1], 0:1])
     print()
 
     # create a dataframe from a list of list
