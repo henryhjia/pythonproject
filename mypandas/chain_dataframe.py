@@ -7,14 +7,13 @@
 @displaycolumns
 use census.csv
 """
-import pandas as pd
 import sys
-import matplotlib
-import matplotlib.pyplot as plt
-import numpy as np
-import common_module
-from os.path import exists
-import timeit
+from pathlib import Path
+import pandas as pd
+from modules import common_module
+
+BASE_DIR = Path(__file__).resolve().parents[1]
+DATA_PATH  = BASE_DIR / 'data' / 'census.csv'
 
 class PandaTester:
   def __init__(self, filename: str):
@@ -93,11 +92,12 @@ class PandaTester:
     print(df[['STNAME', 'REGION', 'state_region']].head())
 
 
-def main(args: list=None) -> int:
-  print(f'lengh of argument : {len(args)}')
+def main(args: list=None) -> None:
+  print(f'length of argument : {len(args)}')
   if len(args) < 2:
     print('usage:', args[0], 'some.csv')
-    exit(1)
+    args.append(DATA_PATH)
+    print(args)
 
   try:
     me = PandaTester(args[1])
