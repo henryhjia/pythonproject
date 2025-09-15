@@ -2,19 +2,7 @@
 leetcode program
 August 2023
 """
-import math
-import cmath
-import itertools
-import calendar
-from datetime import datetime
-from datetime import timedelta
-import pytz
-import re
-from Complex import Complex
-from Points import Points
-from functools import reduce
-from fractions import Fraction
-import common_module
+from modules import common_module
 
 def validate_palindrome():
   """
@@ -149,7 +137,7 @@ def validate_parenthese(s) -> bool:
     
   return True
   
-def validate_parenthese_driver() -> bool:
+def validate_parenthese_driver() -> None:
   """
   """
   common_module.print_function(validate_parenthese_driver)
@@ -231,6 +219,7 @@ def reverse_linked_list():
 
   tmp = Node(node.value, None)
   print('initial obj value=', tmp.value)
+  obj = None
   while node != None:
     
     # print('node value=', node.value, 'tmp value=', tmp.value)
@@ -351,7 +340,7 @@ def frequent_element():
 
 
 
-def main() -> int:
+def main() -> None:
 
   validate_palindrome()
 
