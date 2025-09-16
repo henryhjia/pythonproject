@@ -4,15 +4,15 @@ read json file
 @readjson
 """
 import sys
-
 from modules import json_reader_module
 
 
 def main(args: list = []) -> None:
   print(f'length of argument : {len(args)}')
   if len(args) < 2:
-    print('usage:', args[0], '../data/dad_mom.json')
-    exit(1)
+    print('usage:', args[0], 'data/dad_mom.json')
+    args.append('data/dad_mom.json')
+    print(args)
 
   me = json_reader_module.JsonReader(args[1])
   # me.read_json()
