@@ -13,7 +13,8 @@ def main(args: list=None) -> None:
   print(f'length of argument : {len(args)}')
   if len(args) < 2:
     print('usage:', args[0], 'google')
-    exit(1)
+    args.append('google')
+    print(args)
 
   me = string_sort_module.StringSortModule()
 
