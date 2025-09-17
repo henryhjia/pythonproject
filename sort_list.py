@@ -65,5 +65,12 @@ def main() -> None:
   print(l1)
   print(a)
 
+  # count occurrence of an element in a list
+  print('count occurrence of an element:')
+  mylist= [1,1,2,2,1,3,4,2,3,5,1,2]
+  count = mylist.count(2)
+  print(f'mylist is {mylist}')
+  print(f'occurrence of 2 is: {count}')
+
 if __name__ == '__main__':
   main()
