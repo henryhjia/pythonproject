@@ -2,7 +2,8 @@
 sort string unittest
 @sortstring unittest
 
-usage: python3 -m unittest sort_string_unittest.UnitTest -v
+Usage: python3 -m unittest sort_string_unittest.UnitTest -v
+Usage: in pythonproject/ run python -m basics.sort_string_unittest
 
 """
 import unittest

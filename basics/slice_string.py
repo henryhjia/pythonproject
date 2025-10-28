@@ -2,8 +2,12 @@
 """
 string slicing
 @string_slicing
+
+Usage: in pythonproject/ run python -m basics.slice_string
+
 """
 import logging
+import os
 
 from modules import string_slicing_module
 
@@ -11,7 +15,12 @@ from modules import string_slicing_module
 def main() -> None:
   """
   """
-  logging.basicConfig(filename='slice_string.log', level=logging.INFO, filemode='w')
+  # Determine directory where the current script lives
+  log_dir = os.path.dirname(__file__)
+  log_file = os.path.join(log_dir, 'slice_string.log')
+
+  # Configure logging
+  logging.basicConfig(filename=log_file, level=logging.INFO, filemode='w')
 
   me = string_slicing_module.StringSlicingModule()
 
