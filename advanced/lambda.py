@@ -1,5 +1,8 @@
 """
 lambda test program
+
+Usage: in pythonproject/ run python -m advanced.lambda
+
 """
 from modules import common_module
 

@@ -2,7 +2,8 @@
 sort dictionary unittest
 @sortdictionary unittest
 
-usage: python3 -m unittest sort_dictionary_unittest.UnitTest -v
+Usage: python3 -m unittest sort_dictionary_unittest.UnitTest -v
+Usage: in pythonproject/ run python -m basics.sort_dictionary_unittest
 
 """
 import unittest

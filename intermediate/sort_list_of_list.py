@@ -2,6 +2,9 @@
 """
 Sort list of list
 @sortlistoflist
+
+Usage: in pythonproject/ run python -m intermediate.sort_list_of_list
+
 """
 from modules import list_sort_module
 

@@ -3,6 +3,8 @@
 Sort dictionary
 @sortdictionary
 
+Usage: in pythonproject/ run python -m basics.sort_dictionary
+
 """
 from modules import dictionary_sort_module
 
