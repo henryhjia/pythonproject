@@ -3,6 +3,8 @@
 Sort string
 @sortstring
 
+Usage: in pythonproj/ run python -m basics.sort_string
+
 To sort the characters of the string 'google' in alphabetical order, you can use the sorted() 
 function to create a sorted list of characters and then join() them back into a string.
 """

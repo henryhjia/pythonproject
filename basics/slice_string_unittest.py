@@ -2,7 +2,8 @@
 slice string unittest
 @slicestring unittest
 
-usage: python3 -m unittest slice_string_unittest.UnitTest -v
+Usage: python3 -m unittest slice_string_unittest.UnitTest -v
+Usage: in pythonproj/ run python -m basics.slice_string_unittest
 
 """
 import unittest

@@ -3,6 +3,8 @@
 Sort list
 @sort_list
 
+Usage: in pythonproject/ do: python -m basics.sort_list
+
 Two methods:
 l2 = sorted(l1) - create a new list that is sorted
 l1.sort() - in place sort

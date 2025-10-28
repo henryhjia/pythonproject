@@ -2,6 +2,9 @@
 """
 test program
 advanced sorting for list of complex dictionaries from dad_mom.json
+
+Usage: in pythonproject/ run: python -m sort_json.py ../data/dad_mom.json
+
 """
 import json
 import os
