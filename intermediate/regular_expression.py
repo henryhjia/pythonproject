@@ -1,6 +1,9 @@
 #!/use/bin/python3
 """
 @regularexpression
+
+Usage: in pythonproject/ python -m intermediate.regular_expression
+
 """
 import re
 from modules import common_module

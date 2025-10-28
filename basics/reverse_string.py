@@ -3,6 +3,8 @@
 @brief Reverse string
 @reversestring
 
+Usage: in pythonproject/ python -m basics.reverse_string aStringtoReverse
+
 Two methods:
 1. string slicing
 2. looping

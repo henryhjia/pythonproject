@@ -2,7 +2,8 @@
 sort list unittest
 @sortlist unittest
 
-usage: python3 -m unittest sort_list_unittest.UnitTest -v
+Usage: python3 -m unittest sort_list_unittest.UnitTest -v
+Usage: in pythonproject/ python -m intermediate.sort_list_of_list
 
 """
 import unittest

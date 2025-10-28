@@ -2,7 +2,8 @@
 Reverse list unittest
 @reverselist unittest
 
-usage: python3 -m unittest reverse_list_unittest.UnitTest -v
+Usage: python3 -m unittest reverse_list_unittest.UnitTest -v
+Usage: in pythonproject/ python -m basics.reverse_list_unittest
 
 reverse a list : three methods
 1. looping

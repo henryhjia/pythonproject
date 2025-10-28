@@ -2,7 +2,8 @@
 Reverse string unittest
 @reversestring unittest
 
-usage: python3 -m unittest reverse_string_unittest.UnitTest -v
+Usage: python3 -m unittest reverse_string_unittest.UnitTest -v
+Usage: in pythonproject/ python -m basics.reverse_string_unittest 
 
   me.reverse_data_using_slicing(args[1])
   me.reverse_data_manually(args[1])
