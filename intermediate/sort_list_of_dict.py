@@ -2,6 +2,9 @@
 Sort list of dictionary
 @sort_list_of_dictionary
 list and dictionary are populated in the program
+
+Usage: in pythonproject/ run python -m intermediate.sort_list_of_dict
+
 """
 from modules import list_sort_module
 
