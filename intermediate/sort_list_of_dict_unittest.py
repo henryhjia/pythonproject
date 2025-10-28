@@ -2,7 +2,8 @@
 sort list unittest
 @sortlist unittest
 
-usage: python3 -m unittest sort_list_of_dict_unittest.UnitTest -v
+Usage: python3 -m unittest sort_list_of_dict_unittest.UnitTest -v
+Usage: in pythonproject/ run python -m intermediate.sort_list_of_dict_unittest
 
 """
 import unittest

@@ -18,3 +18,28 @@ The main goals of this project are:
 - 💻 Data Manipulation – Practical examples for working with lists, dictionaries, sets, and more complex data structures using Pandas and NumPy.
 - 🧪 Practice-Oriented – Includes exercises, small projects, and scripts to reinforce learning.
 - ⚡ Clean and Readable Code – Follows Pythonic conventions (PEP8) and emphasizes maintainable code.
+
+## Project Structure
+```
+pythonproject/
+│
+├── basics/               # Basic Python concepts and exercises
+│   ├── slice_string.py
+|   ├── slice_string_unittest.py
+│   ├── sort_dictionary.py
+│   ├── sort_dictionary_unittest.py
+│   ├── sort_json.py
+│   ├── sort_list.py
+│   ├── sort_string.py
+│   └── sort_string_unittest.py
+├── intermediate/         # Intermediate topics (functions, file I/O, error handling)
+│   ├── sort_list_of_dict.py
+│   ├── sort_list_of_dict_unittest.py
+│   ├── sort_list_of_list.py
+│   └── sort_list_of_list_unittest.py
+├── advanced/             # Advanced topics (OOP, decorators, generators)
+│   ├── lambda.py
+│   ├── decorator.py
+│   └── generator.py
+└── README.md
+```
