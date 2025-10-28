@@ -2,6 +2,9 @@
 """
 date time tester 
 @datetime
+
+Usage: in pythonproject/ python -m basics.test_datetime
+
 """
 from modules import datetime_module
 

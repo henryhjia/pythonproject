@@ -3,6 +3,8 @@
 Reverse list
 @reverselist
 
+Usage: in pythonproject/ python -m basics.reverse_list
+
 reverse a list : three methods
 1. looping
 2. list.reverse() method - in place reverse
