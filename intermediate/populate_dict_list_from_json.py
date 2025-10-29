@@ -5,6 +5,8 @@
 3. Print
 4. Write to new json files
 
+Usage: python -m pythonproject.intermediate.populate_dict_list_from_json ../data/input_dict.json
+
 """
 import json
 import sys

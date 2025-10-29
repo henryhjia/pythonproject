@@ -1,6 +1,9 @@
 """
 1. Read family.txt file and populate _dict, _list_of_dict, _list_of_list
 2. Print these data structures
+
+Usage: in pythonproject/ python -m intermediate.populate_dict_list_from_text ../data/family.txt
+
 """
 import sys
 

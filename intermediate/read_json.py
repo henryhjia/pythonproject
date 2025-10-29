@@ -2,6 +2,9 @@
 """
 read json file 
 @readjson
+
+Usage: in pythonproj/ python -m intermediate.read_json
+
 """
 import sys
 from modules import json_reader_module

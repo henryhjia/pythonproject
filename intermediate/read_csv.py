@@ -2,6 +2,9 @@
 """
 read csv file 
 @readcsv
+
+Usage: in pythonproj/ python -m intermediate.read_csv
+
 """
 from modules import csv_reader_module
 

@@ -1,6 +1,9 @@
 """
 leetcode program
 August 2023
+
+Usage: in pythonproj/ python -m intermediate.leetcode
+
 """
 from modules import common_module
 
