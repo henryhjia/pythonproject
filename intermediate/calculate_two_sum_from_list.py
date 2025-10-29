@@ -1,7 +1,9 @@
 """
 calculate two sum from a list and compare it with a target
 @twosum
-commandline: python3 calculate_two_sum_from_list.py [1,2,3] 5
+
+Usage: pythonproject/ python -m intermediate.calculate_two_sum_from_list [1,2,3] 5
+
 """
 import sys
 import two_sum_module

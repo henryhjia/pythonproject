@@ -1,5 +1,8 @@
-# Get sum of a sub list by slicing the list
+"""
+Get sum of a sub list by slicing the list
+Usage: pythonproject/ python -m advanced.get_list_moving_total
 
+"""
 import list_process_module
     
 def main():

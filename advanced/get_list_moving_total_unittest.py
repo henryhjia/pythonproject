@@ -2,7 +2,8 @@
 get list moving total unittest
 @listmovingtotal unittest
 
-usage: python3 -m unittest get_list_moving_total_unittest.UnitTest -v
+Usage: python3 -m unittest get_list_moving_total_unittest.UnitTest -v
+Usage: pythonproject/ python -m advanced.get_list_moving_total_unittest
 
 """
 import unittest

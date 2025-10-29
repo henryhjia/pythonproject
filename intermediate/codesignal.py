@@ -2,6 +2,9 @@
 """
 code signl program
 August 2023
+
+Usage: in pythonprojrct/ python -m intermediate.codesignal
+
 """
 from datetime import datetime
 from datetime import timedelta
@@ -107,7 +110,6 @@ def almost_increase_sequence(alist):
       del alist[i+1]
       break
     
-d=c
   for i in range(len(alist)-1):
     if alist[i+1] <= alist[i]:
       result1 = False
