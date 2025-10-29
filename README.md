@@ -95,7 +95,25 @@ pythonproject/
    ├── mydecorator3.py
    └── mydecorator4.py
 
-├── modules/   
+├── modules/  
+   ├── city_travel_module.py
+   ├── common_module.py
+   ├── csv_reader_module.py
+   ├── datetime_module.py
+   ├── dictionary_process_module.py
+   ├── dictionary_sort_module.py
+   ├── graph_plotter_module.py
+   ├── json_reader_module.py
+   ├── list_process_module.py
+   ├── list_sort_module.py
+   ├── setup.py
+   ├── stack_module.py
+   ├── string_process_module.py
+   ├── string_reverse_module.py
+   ├── string_slicing_module.py
+   ├── string_sort_module.py
+   └── two_sum_module.py
+
 ├── myflask/
 ├── mynumpy/
 ├── mypandas/   
