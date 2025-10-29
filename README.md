@@ -24,6 +24,9 @@ The main goals of this project are:
 pythonproject/
 │
 ├── basics/               # Basic Python concepts and exercises
+   ├── amazon_exam.py
+   ├── check_string_palindrome.py
+   ├── check_string_palindrome_unittest.py
    ├── get_word_count_from_str.py
    ├── get_word_count_from_str_unittest.py
    ├── mykwargs.py
@@ -81,6 +84,7 @@ pythonproject/
 ├── advanced/             # Advanced topics (OOP, decorators, generators)
    ├── decorator.py
    ├── default_dict.py
+   ├── finance.py
    ├── generator.py
    ├── get_list_moving_total.py
    ├── get_list_moving_total_unittest.py

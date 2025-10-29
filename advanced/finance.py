@@ -45,9 +45,9 @@ def main() -> None:
 
   me = FinanceTester()
 
-  # me.finance_test()
+  me.finance_test()
   print(me.tweak_data())
-  # me.my_plot()
+  me.my_plot()
 
 
 if __name__ == '__main__':
