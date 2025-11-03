@@ -18,6 +18,22 @@ from fractions import Fraction
 
 import common_module
 
+from pathlib import Path
+
+# Get the absolute path to the current script
+CURRENT_DIR = Path(__file__).resolve().parent
+
+# Go up one level to project root
+PROJECT_ROOT = CURRENT_DIR.parent
+
+# Point to the data directory
+DATA_DIR = PROJECT_ROOT / "data"
+
+# File path
+input_file = DATA_DIR / "testcase1.txt"
+output_file = DATA_DIR / "testcase1_out.txt"
+
+
 def logo():
   # print('Input thickness of the logo: ')
   # thickness = int(input()) #This must be an odd number
@@ -415,8 +431,8 @@ def default_dict_with_file():
 
   found = False
   d = defaultdict(list)  
-  myfile = open('../data/testcase1.txt', 'r')
-  out_file = open('../data/testcase1_out.txt', 'w')
+  myfile = open(input_file, 'r')
+  out_file = open(output_file, 'w')
   text = myfile.readline()
 
   i = 0

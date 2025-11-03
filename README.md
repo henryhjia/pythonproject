@@ -51,19 +51,20 @@ pythonproject/
 │   ├── test_class_variable.py
 │   ├── test_datetime.py
 │   └── user.py
-│
 ├── intermediate/         # Intermediate topics (functions, file I/O, error handling)
 │   ├── calculate_two_sum_from_list.py
 │   ├── calculate_two_sum_from_list_unittest.py
 │   ├── city_travel.py
 │   ├── city_travel_unittest.py
 │   ├── codesignal.py
+│   ├── Complex.py
 │   ├── count_occur_from_dict.py
 │   ├── count_occur_from_dict_unittest.py
 │   ├── dataclass.py
 │   ├── daterange.py
 │   ├── date_validate.py
 │   ├── graph_plotter.py
+│   ├── hackerrank.py
 │   ├── inheritance.py
 │   ├── iteration_test.py
 │   ├── leetcode.py
@@ -71,16 +72,17 @@ pythonproject/
 │   ├── map.py
 │   ├── mysearch_obj_from_list.py
 │   ├── myunittest.py
+│   ├── Points.py
 │   ├── populate_dict_list_from_json.py
 │   ├── populate_dict_list_from_text.py
 │   ├── read_csv.py
 │   ├── read_json.py
+│   ├── read_pdf_test.py
 │   ├── regular_expression.py
 │   ├── sort_list_of_dict.py
 │   ├── sort_list_of_dict_unittest.py
 │   ├── sort_list_of_list.py
 │   └── sort_list_of_list_unittest.py
-│
 ├── advanced/             # Advanced topics (OOP, decorators, generators)
 │   ├── decorator.py
 │   ├── default_dict.py
@@ -94,7 +96,6 @@ pythonproject/
 │   ├── mydecorator2.py
 │   ├── mydecorator3.py
 │   └── mydecorator4.py
-│
 ├── modules/  
 │   ├── city_travel_module.py
 │   ├── common_module.py
@@ -113,7 +114,6 @@ pythonproject/
 │   ├── string_slicing_module.py
 │   ├── string_sort_module.py
 │   └── two_sum_module.py
-│
 ├── myflask/
 ├── mynumpy/
 ├── mypandas/   
@@ -130,6 +130,7 @@ pythonproject/
 │   ├── read_dataframe_from_csv.py
 │   ├── replace_dataframe.py
 │   └── sort_index_dataframe.py
-│
+├── selenium/   
+│   └── selenium_test.py
 └── README.md
 ```

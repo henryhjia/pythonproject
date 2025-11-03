@@ -1,10 +1,23 @@
 import pdfplumber
 import pandas as pd
+from pathlib import Path
+
+# Get the absolute path to the current script
+CURRENT_DIR = Path(__file__).resolve().parent
+
+# Go up one level to project root
+PROJECT_ROOT = CURRENT_DIR.parent
+
+# Point to the data directory
+DATA_DIR = PROJECT_ROOT / "data"
+
+# File path
+file_path = DATA_DIR / "python_data_pdf.pdf"
 
 mydict = {}
 mylist = []
 
-with pdfplumber.open('./data/python_data_pdf.pdf') as pdf:
+with pdfplumber.open(file_path) as pdf:
   for i, page in enumerate(pdf.pages):
     text = page.extract_text()
     text_list = text.split('\n')
