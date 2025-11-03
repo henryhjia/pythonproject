@@ -12,10 +12,11 @@ class DictTest:
   def __init__(self) -> None:
     self.input_list: List[Dict] = []
     self.master_dict: Dict[str, List[Dict[float, int]]] = {}
-    self.output_file = open('dict_test.txt')
+    self.output_file = open('dict_test.txt', 'w')
 
   def __del__(self) -> None:
-    self.output_file.close()
+    if not self.output_file.closed:
+      self.output_file.close()
     
   def add_data(self, name: str, msg: Any, timestamp: float) -> None:
     tmp_dict = { 'name': name, 'msg': msg, 'timestamp': timestamp }
@@ -57,5 +58,12 @@ class DictTest:
 
     plt.show()
 
-  if __name__ == '__main__':
-    print('module only, not main')
+if __name__ == '__main__':
+    dt = DictTest()
+    dt.add_data('jia', 'hello world', 100.1)
+    dt.add_data('henry', 'this is a test message', 200.2)
+    dt.add_data('jia', 'another message from jia', 100.2)
+    dt.add_data('henry', 'henry second message', 203.5)
+    dt.add_data('henry', 'henry third message', 200.6)
+    dt.process()
+    dt.post_process()
