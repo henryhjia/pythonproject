@@ -16,8 +16,14 @@ order of characters in-place.
 
 If you want to reverse a string, you can achieve it using slicing
 """
-from modules import string_reverse_module
 import sys
+import os
+
+# Add the parent directory to the sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from modules import string_reverse_module
+
 
 def main(args: list=None) -> None:
   print(f'length of argument : {len(args)}')

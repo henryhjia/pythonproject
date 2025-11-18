@@ -9,6 +9,12 @@ Usage: in pythonproject/ python -m basics.reverse_string_unittest
   me.reverse_data_manually(args[1])
 
 """
+import sys
+import os
+
+# Add the parent directory to the sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import unittest
 from modules import string_reverse_module
 
