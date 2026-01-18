@@ -34,7 +34,7 @@ def main(args: list=None) -> None:
   # result: deortS1324
   # 
 
-  result = me.sort_alpha_digit(args[1])
+  result = me.sort_alpha_digit("Sorted1234")
   print('sorted string=', result)
 
 if __name__ == '__main__':
